@@ -9,8 +9,8 @@ __Hirdata 0 0 CODE 0
 __Lirdata 0 0 CODE 0
 __HRAM 0 0 ABS 0
 __LRAM 1 0 ABS 0
-__Hconfig 0 0 ABS 0
-__Lconfig 0 0 ABS 0
+__Hconfig 30000A 0 CONFIG 4
+__Lconfig 0 0 CONFIG 4
 ___inthi_stack_hi 0 0 STACK 2
 __Hbigram 0 0 ABS 0
 __Lbigram 0 0 ABS 0
@@ -131,7 +131,7 @@ __ramtop 2600 0 RAM 0
 __mediumconst 2600 0 SMALLCONST 0
 __Hconst 0 0 CONST 0
 __Lconst 0 0 CONST 0
-__Hspace_4 0 0 ABS 0
+__Hspace_4 60000A 0 ABS 0
 __Lspace_4 0 0 ABS 0
 ___stack_lo 0 0 STACK 2
 __Hbank10 0 0 ABS 0
@@ -210,14 +210,14 @@ smallconst 2600 2601 SMALLCONST 2600 0
 cinit 2602 260B CODE 2602 0
 %locals
 dist/default/production\Q43_OLED_interface.production.o
-C:\Users\PC\AppData\Local\Temp\xcAsh04.\driver_tmp_1.s
-1773 2602 0 CODE 0
-1775 2602 0 CODE 0
-1778 2602 0 CODE 0
-1784 2602 0 CODE 0
-1786 2602 0 CODE 0
-1787 2604 0 CODE 0
+C:\Users\PC\AppData\Local\Temp\xcAs9ck.\driver_tmp_1.s
+1805 2602 0 CODE 0
+1807 2602 0 CODE 0
+1810 2602 0 CODE 0
+1816 2602 0 CODE 0
+1818 2602 0 CODE 0
+1819 2604 0 CODE 0
 main.c
-11 2608 0 CODE 0
-12 2608 0 CODE 0
-13 2608 0 CODE 0
+68 2608 0 CODE 0
+69 2608 0 CODE 0
+70 2608 0 CODE 0

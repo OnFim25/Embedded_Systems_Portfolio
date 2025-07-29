@@ -1,5 +1,69 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
+"13 main.c
+[p x FEXTOSC  =  HS      ]
+"14
+[p x RSTOSC  =  HFINTOSC_64MHZ ]
+"17
+[p x CLKOUTEN  =  OFF    ]
+"18
+[p x PR1WAY  =  OFF      ]
+"19
+[p x CSWEN  =  ON        ]
+"20
+[p x FCMEN  =  OFF       ]
+"23
+[p x MCLRE  =  EXTMCLR   ]
+"24
+[p x PWRTS  =  PWRT_OFF  ]
+"25
+[p x MVECEN  =  ON       ]
+"26
+[p x IVT1WAY  =  ON      ]
+"27
+[p x LPBOREN  =  OFF     ]
+"28
+[p x BOREN  =  SBORDIS   ]
+"31
+[p x BORV  =  VBOR_1P9   ]
+"32
+[p x ZCD  =  OFF         ]
+"33
+[p x PPS1WAY  =  ON      ]
+"34
+[p x STVREN  =  OFF      ]
+"35
+[p x LVP  =  ON          ]
+"36
+[p x XINST  =  OFF       ]
+"39
+[p x WDTCPS  =  WDTCPS_31 ]
+"40
+[p x WDTE  =  OFF        ]
+"43
+[p x WDTCWS  =  WDTCWS_7 ]
+"44
+[p x WDTCCS  =  SC       ]
+"47
+[p x BBSIZE  =  BBSIZE_512 ]
+"48
+[p x BBEN  =  OFF        ]
+"49
+[p x SAFEN  =  OFF       ]
+"50
+[p x DEBUG  =  OFF       ]
+"53
+[p x WRTB  =  OFF        ]
+"54
+[p x WRTC  =  OFF        ]
+"55
+[p x WRTD  =  OFF        ]
+"56
+[p x WRTSAF  =  OFF      ]
+"57
+[p x WRTAPP  =  OFF      ]
+"60
+[p x CP  =  OFF          ]
 "270 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 270: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2476,16 +2540,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 49067: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"11 main.c
-[; ;main.c: 11: void main(void) {
+"68 main.c
+[; ;main.c: 68: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"12
-[; ;main.c: 12:     return;
+"69
+[; ;main.c: 69:     return;
 [e $UE 2357  ]
-"13
-[; ;main.c: 13: }
+"70
+[; ;main.c: 70: }
 [e :UE 2357 ]
 }
