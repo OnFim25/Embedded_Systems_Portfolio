@@ -1,5 +1,5 @@
-build/default/production/main.p1:  \
-main.c  \
+build/default/production/Functions.p1:  \
+Functions.c  \
 main.h  \
 defines.h  \
 init.h  \

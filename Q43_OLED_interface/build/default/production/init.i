@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "init.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,60 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 13 "main.c"
-#pragma config FEXTOSC = HS
-#pragma config RSTOSC = HFINTOSC_64MHZ
-
-
-#pragma config CLKOUTEN = OFF
-#pragma config PR1WAY = OFF
-#pragma config CSWEN = ON
-#pragma config FCMEN = OFF
-
-
-#pragma config MCLRE = EXTMCLR
-#pragma config PWRTS = PWRT_OFF
-#pragma config MVECEN = ON
-#pragma config IVT1WAY = ON
-#pragma config LPBOREN = OFF
-#pragma config BOREN = SBORDIS
-
-
-#pragma config BORV = VBOR_1P9
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = ON
-#pragma config STVREN = OFF
-#pragma config LVP = ON
-#pragma config XINST = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-
-
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config BBSIZE = BBSIZE_512
-#pragma config BBEN = OFF
-#pragma config SAFEN = OFF
-#pragma config DEBUG = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-#pragma config WRTD = OFF
-#pragma config WRTSAF = OFF
-#pragma config WRTAPP = OFF
-
-
-#pragma config CP = OFF
-
-
-
-
+# 1 "init.c" 2
 # 1 "./main.h" 1
 # 15 "./main.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -28254,15 +28201,88 @@ unsigned char __t3rd16on(void);
 # 1 "./main.h" 1
 # 16 "./I2C.h" 2
 # 22 "./main.h" 2
-# 66 "main.c" 2
+# 2 "init.c" 2
 
 
+void INIT_SYSTEM(){
+    INIT_OSC();
+
+    CONFIGURE_PINS();
+
+    INIT_TIMER0();
+    INIT_INTERRUPTS();
+}
+
+void INIT_OSC(){
+
+    OSCCON1bits.NOSC = 0b110;
 
 
-void main(void) {
+    OSCCON1bits.NDIV= 0b0000;
 
-    INIT_SYSTEM();
 
-    while(1);
-    return;
+    OSCTUNE = 0b000000;
+
+
+    OSCFRQ = 0b1000;
+
+
+    OSCENbits.HFOEN = 1;
+
+
+    while(!OSCSTATbits.HFOR);
+}
+
+
+void INIT_TIMER0(){
+
+
+    T0CON1bits.CS = 0b010;
+
+
+    T0CON1bits.CKPS = 0b0100;
+
+
+    T0CON0bits.OUTPS = 0b0011;
+
+
+    TMR0H = 250;
+
+
+    T0CON0bits.EN = 1;
+
+}
+
+void CONFIGURE_PINS(){
+
+}
+
+void INIT_INTERRUPTS(){
+
+    TMR0IE = 1;
+    INTCON0bits.GIE = 1;
+}
+
+void INIT_I2C(){
+
+
+    I2C1CON0bits.EN = 0;
+
+
+    I2C1CLK = 0b00011;
+
+
+    I2C1CON0bits.MODE = 0b100;
+
+
+    I2C1CON2bits.FME = 0;
+
+
+    I2C1CON2bits.BFRET = 0b11;
+
+
+    I2C1STAT1bits.CLRBF = 1;
+
+
+    I2C1CON0bits.EN = 1;
 }

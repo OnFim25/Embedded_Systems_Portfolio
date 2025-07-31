@@ -1,72 +1,62 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"17 ./init.h
-[; ;./init.h: 17:     void INIT_SYSTEM(void);
-[v _INIT_SYSTEM `(v ~T0 @X0 0 ef ]
-"13 main.c
-[p x FEXTOSC  =  HS      ]
-"14
-[p x RSTOSC  =  HFINTOSC_64MHZ ]
-"17
-[p x CLKOUTEN  =  OFF    ]
-"18
-[p x PR1WAY  =  OFF      ]
-"19
-[p x CSWEN  =  ON        ]
-"20
-[p x FCMEN  =  OFF       ]
-"23
-[p x MCLRE  =  EXTMCLR   ]
-"24
-[p x PWRTS  =  PWRT_OFF  ]
-"25
-[p x MVECEN  =  ON       ]
-"26
-[p x IVT1WAY  =  ON      ]
-"27
-[p x LPBOREN  =  OFF     ]
-"28
-[p x BOREN  =  SBORDIS   ]
-"31
-[p x BORV  =  VBOR_1P9   ]
-"32
-[p x ZCD  =  OFF         ]
-"33
-[p x PPS1WAY  =  ON      ]
-"34
-[p x STVREN  =  OFF      ]
-"35
-[p x LVP  =  ON          ]
-"36
-[p x XINST  =  OFF       ]
-"39
-[p x WDTCPS  =  WDTCPS_31 ]
-"40
-[p x WDTE  =  OFF        ]
-"43
-[p x WDTCWS  =  WDTCWS_7 ]
-"44
-[p x WDTCCS  =  SC       ]
-"47
-[p x BBSIZE  =  BBSIZE_512 ]
-"48
-[p x BBEN  =  OFF        ]
-"49
-[p x SAFEN  =  OFF       ]
-"50
-[p x DEBUG  =  OFF       ]
-"53
-[p x WRTB  =  OFF        ]
-"54
-[p x WRTC  =  OFF        ]
-"55
-[p x WRTD  =  OFF        ]
-"56
-[p x WRTSAF  =  OFF      ]
-"57
-[p x WRTAPP  =  OFF      ]
-"60
-[p x CP  =  OFF          ]
+"14920 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 14920: extern volatile unsigned char I2C1CNT __attribute__((address(0x28D)));
+[v _I2C1CNT `Vuc ~T0 @X0 0 e@653 ]
+"14900
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 14900: extern volatile unsigned char I2C1TXB __attribute__((address(0x28C)));
+[v _I2C1TXB `Vuc ~T0 @X0 0 e@652 ]
+"15418
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15418:     struct {
+[s S763 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S763 . . D R MMA SMA BFRE ]
+"15426
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15426:     struct {
+[s S764 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S764 . . DATA READ ]
+"15431
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15431:     struct {
+[s S765 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S765 . . NOT_ADDRESS NOT_WRITE ]
+"15436
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15436:     struct {
+[s S766 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S766 . . NOT_A NOT_W ]
+"15417
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15417: typedef union {
+[u S762 `S763 1 `S764 1 `S765 1 `S766 1 ]
+[n S762 . . . . . ]
+"15442
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15442: extern volatile I2C1STAT0bits_t I2C1STAT0bits __attribute__((address(0x298)));
+[v _I2C1STAT0bits `VS762 ~T0 @X0 0 e@664 ]
+"15118
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15118:     struct {
+[s S752 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S752 . MODE MDR CSTR S RSEN EN ]
+"15126
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15126:     struct {
+[s S753 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S753 . MODE0 MODE1 MODE2 . I2CEN ]
+"15117
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15117: typedef union {
+[u S751 `S752 1 `S753 1 ]
+[n S751 . . . ]
+"15134
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15134: extern volatile I2C1CON0bits_t I2C1CON0bits __attribute__((address(0x294)));
+[v _I2C1CON0bits `VS751 ~T0 @X0 0 e@660 ]
+"16 ./Functions.h
+[; ;./Functions.h: 16:     void delay_ms(unsigned long);
+[v _delay_ms `(v ~T0 @X0 0 ef1`ul ]
+"15195 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15195:     struct {
+[s S755 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S755 . CSD TXU RXO . ACKT ACKSTAT ACKDT ACKCNT ]
+"15194
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15194: typedef union {
+[u S754 `S755 1 ]
+[n S754 . . ]
+"15206
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 15206: extern volatile I2C1CON1bits_t I2C1CON1bits __attribute__((address(0x295)));
+[v _I2C1CON1bits `VS754 ~T0 @X0 0 e@661 ]
 "270 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 270: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2542,26 +2532,95 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49067
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 49067: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-[v $root$_main `(v ~T0 @X0 0 e ]
-"70 main.c
-[; ;main.c: 70: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
+"3 I2C.c
+[; ;I2C.c: 3: int I2C_start(char R_nW){
+[v _I2C_start `(i ~T0 @X0 1 ef1`uc ]
 {
-[e :U _main ]
+[e :U _I2C_start ]
+[v _R_nW `uc ~T0 @X0 1 r1 ]
 [f ]
-"72
-[; ;main.c: 72:     INIT_SYSTEM();
-[e ( _INIT_SYSTEM ..  ]
-"74
-[; ;main.c: 74:     while(1);
-[e :U 2359 ]
-[e :U 2358 ]
+"4
+[; ;I2C.c: 4:     uint8_t addr = 0;
+[v _addr `uc ~T0 @X0 1 a ]
+[e = _addr -> -> 0 `i `uc ]
+"7
+[; ;I2C.c: 7:     if(R_nW == 'r')
+[e $ ! == -> _R_nW `ui -> 114 `ui 2358  ]
+"8
+[; ;I2C.c: 8:         addr = 0b01111000 | 0x01;
+[e = _addr -> | -> 120 `i -> 1 `i `uc ]
 [e $U 2359  ]
+"9
+[; ;I2C.c: 9:     else
+[e :U 2358 ]
+"10
+[; ;I2C.c: 10:         addr = 0b01111000 & 0xFE;
+[e = _addr -> & -> 120 `i -> 254 `i `uc ]
+[e :U 2359 ]
+"13
+[; ;I2C.c: 13:     I2C1CNT = 2;
+[e = _I2C1CNT -> -> 2 `i `uc ]
+"15
+[; ;I2C.c: 15:     I2C1TXB = addr;
+[e = _I2C1TXB _addr ]
+"17
+[; ;I2C.c: 17:     while(!I2C1STAT0bits.BFRE);
+[e $U 2360  ]
+[e :U 2361 ]
 [e :U 2360 ]
-"75
-[; ;main.c: 75:     return;
+[e $ ! != -> . . _I2C1STAT0bits 0 5 `i -> 0 `i 2361  ]
+[e :U 2362 ]
+"20
+[; ;I2C.c: 20:     I2C1CON0bits.S = 1;
+[e = . . _I2C1CON0bits 0 3 -> -> 1 `i `uc ]
+"23
+[; ;I2C.c: 23:     while(!I2C1STAT0bits.MMA);
+[e $U 2363  ]
+[e :U 2364 ]
+[e :U 2363 ]
+[e $ ! != -> . . _I2C1STAT0bits 0 3 `i -> 0 `i 2364  ]
+[e :U 2365 ]
+"25
+[; ;I2C.c: 25:     delay_ms(1);
+[e ( _delay_ms (1 -> -> -> 1 `i `l `ul ]
+"27
+[; ;I2C.c: 27:     if(!I2C1CON1bits.ACKSTAT)
+[e $ ! ! != -> . . _I2C1CON1bits 0 5 `i -> 0 `i 2366  ]
+"28
+[; ;I2C.c: 28:         return 0;
+[e ) -> 0 `i ]
 [e $UE 2357  ]
-"76
-[; ;main.c: 76: }
+[e $U 2367  ]
+"29
+[; ;I2C.c: 29:     else
+[e :U 2366 ]
+"30
+[; ;I2C.c: 30:         return 1;
+[e ) -> 1 `i ]
+[e $UE 2357  ]
+[e :U 2367 ]
+"31
+[; ;I2C.c: 31: }
 [e :UE 2357 ]
+}
+"33
+[; ;I2C.c: 33: void I2C_send(uint8_t addr){
+[v _I2C_send `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _I2C_send ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[f ]
+"36
+[; ;I2C.c: 36: }
+[e :UE 2368 ]
+}
+"38
+[; ;I2C.c: 38: void I2C_stop(){
+[v _I2C_stop `(v ~T0 @X0 1 ef ]
+{
+[e :U _I2C_stop ]
+[f ]
+"40
+[; ;I2C.c: 40: }
+[e :UE 2369 ]
 }

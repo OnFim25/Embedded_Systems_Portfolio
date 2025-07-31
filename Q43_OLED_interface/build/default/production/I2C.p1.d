@@ -1,5 +1,5 @@
-build/default/production/main.p1:  \
-main.c  \
+build/default/production/I2C.p1:  \
+I2C.c  \
 main.h  \
 defines.h  \
 init.h  \

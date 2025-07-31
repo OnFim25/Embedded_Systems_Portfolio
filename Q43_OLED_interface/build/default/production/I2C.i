@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "I2C.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,60 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 13 "main.c"
-#pragma config FEXTOSC = HS
-#pragma config RSTOSC = HFINTOSC_64MHZ
-
-
-#pragma config CLKOUTEN = OFF
-#pragma config PR1WAY = OFF
-#pragma config CSWEN = ON
-#pragma config FCMEN = OFF
-
-
-#pragma config MCLRE = EXTMCLR
-#pragma config PWRTS = PWRT_OFF
-#pragma config MVECEN = ON
-#pragma config IVT1WAY = ON
-#pragma config LPBOREN = OFF
-#pragma config BOREN = SBORDIS
-
-
-#pragma config BORV = VBOR_1P9
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = ON
-#pragma config STVREN = OFF
-#pragma config LVP = ON
-#pragma config XINST = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-
-
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config BBSIZE = BBSIZE_512
-#pragma config BBEN = OFF
-#pragma config SAFEN = OFF
-#pragma config DEBUG = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-#pragma config WRTD = OFF
-#pragma config WRTSAF = OFF
-#pragma config WRTAPP = OFF
-
-
-#pragma config CP = OFF
-
-
-
-
+# 1 "I2C.c" 2
 # 1 "./main.h" 1
 # 15 "./main.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -28254,15 +28201,43 @@ unsigned char __t3rd16on(void);
 # 1 "./main.h" 1
 # 16 "./I2C.h" 2
 # 22 "./main.h" 2
-# 66 "main.c" 2
+# 2 "I2C.c" 2
+
+int I2C_start(char R_nW){
+    uint8_t addr = 0;
 
 
+    if(R_nW == 'r')
+        addr = 0b01111000 | 0x01;
+    else
+        addr = 0b01111000 & 0xFE;
 
 
-void main(void) {
+    I2C1CNT = 2;
 
-    INIT_SYSTEM();
+    I2C1TXB = addr;
 
-    while(1);
-    return;
+    while(!I2C1STAT0bits.BFRE);
+
+
+    I2C1CON0bits.S = 1;
+
+
+    while(!I2C1STAT0bits.MMA);
+
+    delay_ms(1);
+
+    if(!I2C1CON1bits.ACKSTAT)
+        return 0;
+    else
+        return 1;
+}
+
+void I2C_send(uint8_t addr){
+
+
+}
+
+void I2C_stop(){
+
 }

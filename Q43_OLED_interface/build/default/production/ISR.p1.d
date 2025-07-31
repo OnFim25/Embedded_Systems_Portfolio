@@ -1,5 +1,5 @@
-build/default/production/main.p1:  \
-main.c  \
+build/default/production/ISR.p1:  \
+ISR.c  \
 main.h  \
 defines.h  \
 init.h  \

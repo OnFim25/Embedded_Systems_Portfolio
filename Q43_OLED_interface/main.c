@@ -62,9 +62,15 @@
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
-#include <xc.h>
+#include"main.h"
+
+
 
 
 void main(void) {
+    
+    INIT_SYSTEM();
+    
+    while(1);
     return;
 }
