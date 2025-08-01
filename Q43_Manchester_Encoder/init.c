@@ -9,6 +9,7 @@ void INIT_SYSTEM(){
     INIT_INTERRUPTS();
 }
 
+/*FOSC = 64MHz (HFINTOSC)*/
 void INIT_OSC(){
     //Clock source is HFINOSC
     OSCCON1bits.NOSC = 0b110;
@@ -64,11 +65,42 @@ void INIT_INTERRUPTS(){
     //Disable global interrupts
     INTCON0bits.GIE = 0;
 
-    
-    
     /*Timer0 interrupt*/
     TMR0IE = 1;
     TMR0IF = 0;
+    
+    /*Enable global interrupts*/
     INTCON0bits.GIE = 1;
     
+}
+
+//Initialize CLC for XOR operation (Manchester encoding)
+void INIT_CLC1(){
+    //CLC registers of instance CLCSELECT+1 are selected ie; CLC1
+    CLCSELECT = 0;
+    
+    //CLC cell is in OR_XOR
+    CLCnCONbits.MODE = 0b001;
+    
+    //CLC output is not inverted
+    CLCnPOLbits.POL = 0;
+    
+    //D1S MUX input => PWM1S1P1_OUT
+    CLCnSEL0 = 0b01000010;
+    
+    //D2S MUX input => UART5 TX
+    CLCnSEL1 = 0b01111111;
+    
+    //Only gates 1&3 output the data for OR_XOR cell inputs inputs are selected
+    //Other gates must output 0 so that they won't interfere at the OR gate of the Cell
+    CLCnGLS0 = 0b00000010;
+    CLCnGLS1 = 0b00000000;
+    
+    CLCnGLS2 = 0b00001000;
+    CLCnGLS3 = 0b00000000;
+    
+    
+    
+    //Enable CLC1
+    CLCnCONbits.EN = 1;
 }

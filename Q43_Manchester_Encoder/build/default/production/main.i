@@ -28229,6 +28229,8 @@ unsigned char __t3rd16on(void);
 
     void INIT_TIMER0(void);
     void INIT_INTERRUPTS(void);
+
+    void INIT_CLC1(void);
 # 17 "./main.h" 2
 # 66 "main.c" 2
 

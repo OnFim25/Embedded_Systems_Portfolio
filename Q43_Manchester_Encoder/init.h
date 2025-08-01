@@ -21,6 +21,8 @@ extern "C" {
     
     void INIT_TIMER0(void);
     void INIT_INTERRUPTS(void);
+    
+    void INIT_CLC1(void);
 
 
 

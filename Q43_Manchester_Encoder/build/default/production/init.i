@@ -28176,6 +28176,8 @@ unsigned char __t3rd16on(void);
 
     void INIT_TIMER0(void);
     void INIT_INTERRUPTS(void);
+
+    void INIT_CLC1(void);
 # 17 "./main.h" 2
 # 2 "init.c" 2
 
@@ -28187,6 +28189,7 @@ void INIT_SYSTEM(){
     INIT_TIMER0();
     INIT_INTERRUPTS();
 }
+
 
 void INIT_OSC(){
 
@@ -28244,10 +28247,41 @@ void INIT_INTERRUPTS(){
     INTCON0bits.GIE = 0;
 
 
-
-
     TMR0IE = 1;
     TMR0IF = 0;
+
+
     INTCON0bits.GIE = 1;
 
+}
+
+
+void INIT_CLC1(){
+
+    CLCSELECT = 0;
+
+
+    CLCnCONbits.MODE = 0b001;
+
+
+    CLCnPOLbits.POL = 0;
+
+
+    CLCnSEL0 = 0b01000010;
+
+
+    CLCnSEL1 = 0b01111111;
+
+
+
+    CLCnGLS0 = 0b00000010;
+    CLCnGLS1 = 0b00000000;
+
+    CLCnGLS2 = 0b00001000;
+    CLCnGLS3 = 0b00000000;
+
+
+
+
+    CLCnCONbits.EN = 1;
 }
