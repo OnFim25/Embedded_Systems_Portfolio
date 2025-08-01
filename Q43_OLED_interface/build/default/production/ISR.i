@@ -28206,8 +28206,13 @@ unsigned char __t3rd16on(void);
 volatile unsigned long msec = 0;
 volatile unsigned long msDelay = 0;
 
-void __attribute__((picinterrupt(("irq(TMR0), high_priority")))) ISR(){
+void __attribute__((picinterrupt(("irq(TMR0), high_priority")))) TMRINT(){
     TMR0IF = 0;
     msec++;
     if(msDelay) msDelay--;
+}
+
+
+void __attribute__((picinterrupt(("irq(default), low_priority")))) otherISR(){
+    return;
 }

@@ -28230,8 +28230,17 @@ void INIT_OSC(){
     OSCENbits.HFOEN = 1;
 
 
+    OSCENbits.MFOEN = 1;
+
+
     while(!OSCSTATbits.HFOR);
+    while(!OSCSTATbits.MFOR);
 }
+
+
+
+
+
 
 
 void INIT_TIMER0(){
@@ -28259,9 +28268,25 @@ void CONFIGURE_PINS(){
 
 void INIT_INTERRUPTS(){
 
+
+
+    INTCON0bits.GIE = 0;
+
+
+    INTCON0bits.IPEN = 1;
+
+
+
     TMR0IE = 1;
+    INTCON0bits.GIEL = 1;
     INTCON0bits.GIE = 1;
+
 }
+
+
+
+
+
 
 void INIT_I2C(){
 

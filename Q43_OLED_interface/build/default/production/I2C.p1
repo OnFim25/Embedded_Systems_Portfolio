@@ -2610,6 +2610,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _I2C_send ]
 [v _addr `uc ~T0 @X0 1 r1 ]
 [f ]
+"35
+[; ;I2C.c: 35:     I2C1TXB = addr;
+[e = _I2C1TXB _addr ]
 "36
 [; ;I2C.c: 36: }
 [e :UE 2368 ]

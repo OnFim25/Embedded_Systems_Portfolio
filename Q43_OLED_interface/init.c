@@ -26,11 +26,20 @@ void INIT_OSC(){
     //HFINTOSC explicitly enabled
     OSCENbits.HFOEN = 1;
     
-    //Wait for Oscillator to begin
-    while(!OSCSTATbits.HFOR); 
+    //Enable MFINTOSC for I2C module
+    OSCENbits.MFOEN = 1;
+    
+    //Wait for Oscillators to begin
+    while(!OSCSTATbits.HFOR);   //HFINTOSC ready flag
+    while(!OSCSTATbits.MFOR);   //MFINTOSC ready flag
 }
 
-
+/*
+ * clock source : FOSC/4
+ * Post scalar  : 4
+ * pre scalar   : 16
+ * millisecond timer  
+ */
 void INIT_TIMER0(){
     
     //Clock source FOSC/4 
@@ -55,11 +64,27 @@ void CONFIGURE_PINS(){
 }
 
 void INIT_INTERRUPTS(){
+    /*Setting Priorities for the interrupts*/
+    
+    //Disable global interrupts
+    INTCON0bits.GIE = 0;
+    
+    //Enable priorities for the interrupts
+    INTCON0bits.IPEN = 1;
+    
+    
     /*Timer0 interrupt*/
     TMR0IE = 1;
+    INTCON0bits.GIEL = 1;
     INTCON0bits.GIE = 1;
+    
 }
 
+/*****************************************
+ *  I2C clock source : MFINTOSC (500KHz) *
+ *  I2C clock divider : 5                *
+ *  SCL frequency : 100KHz               *
+ *****************************************/
 void INIT_I2C(){
     
     //I2C module disabled

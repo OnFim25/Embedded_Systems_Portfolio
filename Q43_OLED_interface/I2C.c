@@ -32,7 +32,7 @@ int I2C_start(char R_nW){
 
 void I2C_send(uint8_t addr){
     
-    
+    I2C1TXB = addr;
 }
 
 void I2C_stop(){
