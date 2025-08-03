@@ -5,6 +5,10 @@ void UART_SendByte(char byte){
     //wait for the transmit buffer to get empty
     while(!U5ERRIRbits.TXMTIF);
     
+    //Reload PWM period and parameters and enable pwm module
+    PWM1CONbits.LD = 1;
+    PWM1CONbits.EN = 1;
+    
     //load data to transmit buffer
     U5TXB = byte;
     

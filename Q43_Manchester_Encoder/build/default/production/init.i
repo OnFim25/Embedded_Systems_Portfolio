@@ -28295,7 +28295,13 @@ void INIT_PWM(){
     PWM1PR = 1665;
 
 
-    PWM1CONbits.LD = 1;
+    PWM1S1P1 = 1666;
+    PWM1S1P2 = 1666;
+
+
+    PWM1S1CFGbits.MODE = 0b000;
+
+
 }
 
 

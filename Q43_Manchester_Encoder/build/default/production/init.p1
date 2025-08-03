@@ -197,17 +197,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "43785
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43785: extern volatile unsigned short PWM1PR __attribute__((address(0x463)));
 [v _PWM1PR `Vus ~T0 @X0 0 e@1123 ]
-"43930
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43930:     struct {
-[s S2069 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S2069 . ERSNOW ERSPOL LD . EN ]
-"43929
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43929: typedef union {
-[u S2068 `S2069 1 ]
-[n S2068 . . ]
-"43938
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43938: extern volatile PWM1CONbits_t PWM1CONbits __attribute__((address(0x469)));
-[v _PWM1CONbits `VS2068 ~T0 @X0 0 e@1129 ]
+"44022
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 44022: extern volatile unsigned short PWM1S1P1 __attribute__((address(0x46B)));
+[v _PWM1S1P1 `Vus ~T0 @X0 0 e@1131 ]
+"44069
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 44069: extern volatile unsigned short PWM1S1P2 __attribute__((address(0x46D)));
+[v _PWM1S1P2 `Vus ~T0 @X0 0 e@1133 ]
+"43969
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43969:     struct {
+[s S2071 :3 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2071 . MODE PPEN . POL1 POL2 ]
+"43976
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43976:     struct {
+[s S2072 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2072 . MODE0 MODE1 MODE2 ]
+"43968
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43968: typedef union {
+[u S2070 `S2071 1 `S2072 1 ]
+[n S2070 . . . ]
+"43982
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43982: extern volatile PWM1S1CFGbits_t PWM1S1CFGbits __attribute__((address(0x46A)));
+[v _PWM1S1CFGbits `VS2070 ~T0 @X0 0 e@1130 ]
 "6343
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 6343: extern volatile unsigned char CLCSELECT __attribute__((address(0x0D5)));
 [v _CLCSELECT `Vuc ~T0 @X0 0 e@213 ]
@@ -2885,49 +2895,55 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;init.c: 106:     PWM1PR = 1665;
 [e = _PWM1PR -> -> 1665 `i `us ]
 "109
-[; ;init.c: 109:     PWM1CONbits.LD = 1;
-[e = . . _PWM1CONbits 0 2 -> -> 1 `i `uc ]
+[; ;init.c: 109:     PWM1S1P1 = 1666;
+[e = _PWM1S1P1 -> -> 1666 `i `us ]
 "110
-[; ;init.c: 110: }
+[; ;init.c: 110:     PWM1S1P2 = 1666;
+[e = _PWM1S1P2 -> -> 1666 `i `us ]
+"113
+[; ;init.c: 113:     PWM1S1CFGbits.MODE = 0b000;
+[e = . . _PWM1S1CFGbits 0 0 -> -> 0 `i `uc ]
+"116
+[; ;init.c: 116: }
 [e :UE 2366 ]
 }
-"113
-[; ;init.c: 113: void INIT_CLC1(){
+"119
+[; ;init.c: 119: void INIT_CLC1(){
 [v _INIT_CLC1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _INIT_CLC1 ]
 [f ]
-"115
-[; ;init.c: 115:     CLCSELECT = 0;
-[e = _CLCSELECT -> -> 0 `i `uc ]
-"118
-[; ;init.c: 118:     CLCnCONbits.MODE = 0b001;
-[e = . . _CLCnCONbits 0 0 -> -> 1 `i `uc ]
 "121
-[; ;init.c: 121:     CLCnPOLbits.POL = 0;
-[e = . . _CLCnPOLbits 0 5 -> -> 0 `i `uc ]
+[; ;init.c: 121:     CLCSELECT = 0;
+[e = _CLCSELECT -> -> 0 `i `uc ]
 "124
-[; ;init.c: 124:     CLCnSEL0 = 0b01000010;
-[e = _CLCnSEL0 -> -> 66 `i `uc ]
+[; ;init.c: 124:     CLCnCONbits.MODE = 0b001;
+[e = . . _CLCnCONbits 0 0 -> -> 1 `i `uc ]
 "127
-[; ;init.c: 127:     CLCnSEL1 = 0b01111111;
+[; ;init.c: 127:     CLCnPOLbits.POL = 0;
+[e = . . _CLCnPOLbits 0 5 -> -> 0 `i `uc ]
+"130
+[; ;init.c: 130:     CLCnSEL0 = 0b01000010;
+[e = _CLCnSEL0 -> -> 66 `i `uc ]
+"133
+[; ;init.c: 133:     CLCnSEL1 = 0b01111111;
 [e = _CLCnSEL1 -> -> 127 `i `uc ]
-"131
-[; ;init.c: 131:     CLCnGLS0 = 0b00000010;
+"137
+[; ;init.c: 137:     CLCnGLS0 = 0b00000010;
 [e = _CLCnGLS0 -> -> 2 `i `uc ]
-"132
-[; ;init.c: 132:     CLCnGLS1 = 0b00000000;
+"138
+[; ;init.c: 138:     CLCnGLS1 = 0b00000000;
 [e = _CLCnGLS1 -> -> 0 `i `uc ]
-"134
-[; ;init.c: 134:     CLCnGLS2 = 0b00001000;
-[e = _CLCnGLS2 -> -> 8 `i `uc ]
-"135
-[; ;init.c: 135:     CLCnGLS3 = 0b00000000;
-[e = _CLCnGLS3 -> -> 0 `i `uc ]
 "140
-[; ;init.c: 140:     CLCnCONbits.EN = 1;
-[e = . . _CLCnCONbits 0 5 -> -> 1 `i `uc ]
+[; ;init.c: 140:     CLCnGLS2 = 0b00001000;
+[e = _CLCnGLS2 -> -> 8 `i `uc ]
 "141
-[; ;init.c: 141: }
+[; ;init.c: 141:     CLCnGLS3 = 0b00000000;
+[e = _CLCnGLS3 -> -> 0 `i `uc ]
+"146
+[; ;init.c: 146:     CLCnCONbits.EN = 1;
+[e = . . _CLCnCONbits 0 5 -> -> 1 `i `uc ]
+"147
+[; ;init.c: 147: }
 [e :UE 2367 ]
 }

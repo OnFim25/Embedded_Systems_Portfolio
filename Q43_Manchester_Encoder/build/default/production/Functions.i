@@ -28195,6 +28195,10 @@ void UART_SendByte(char byte){
     while(!U5ERRIRbits.TXMTIF);
 
 
+    PWM1CONbits.LD = 1;
+    PWM1CONbits.EN = 1;
+
+
     U5TXB = byte;
 
 

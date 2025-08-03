@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+$C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 init CODE 0 1A 1A 4 1 2
 reset_vec CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 A 1 1
@@ -101,19 +101,19 @@ $dist/default/production\Q43_Manchester_Encoder.production.o
 2628 text0 CODE >67:E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\main.c
 2628 text0 CODE >68:E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\main.c
 2628 text0 CODE >69:E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\main.c
-2602 cinit CODE >6818:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2602 cinit CODE >6820:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2602 cinit CODE >6823:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2602 cinit CODE >6831:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2604 cinit CODE >6832:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2606 cinit CODE >6833:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2608 cinit CODE >6834:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-260A cinit CODE >6835:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-260C cinit CODE >6836:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-260E cinit CODE >6837:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2610 cinit CODE >6843:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2610 cinit CODE >6845:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
-2612 cinit CODE >6846:C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_1.s
+2602 cinit CODE >6824:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2602 cinit CODE >6826:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2602 cinit CODE >6829:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2602 cinit CODE >6837:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2604 cinit CODE >6838:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2606 cinit CODE >6839:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2608 cinit CODE >6840:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+260A cinit CODE >6841:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+260C cinit CODE >6842:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+260E cinit CODE >6843:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2610 cinit CODE >6849:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2610 cinit CODE >6851:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
+2612 cinit CODE >6852:C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -140,26 +140,27 @@ __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Q43_Manchester_En
 _U5ERRIRbits 2FE 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 _OSCENbits B3 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 __Lsmallconst 2600 0 SMALLCONST 0 smallconst dist/default/production\Q43_Manchester_Encoder.production.o
-___sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+___sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 _main 2628 0 CODE 0 text0 dist/default/production\Q43_Manchester_Encoder.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-start 1A 0 CODE 0 init C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+start 1A 0 CODE 0 init C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\Q43_Manchester_Encoder.production.o
-__accesstop 560 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+__accesstop 560 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Q43_Manchester_Encoder.production.o
+_PWM1S1CFGbits 46A 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\Q43_Manchester_Encoder.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\Q43_Manchester_Encoder.production.o
 _U5CON0bits 2F7 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 _U5CON1bits 2F8 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 _U5CON2bits 2F9 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\Q43_Manchester_Encoder.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Q43_Manchester_Encoder.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Q43_Manchester_Encoder.production.o
 _CLCSELECT D5 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
@@ -171,7 +172,7 @@ _PWM1PR 463 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.
 ___rparam_used 1 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 _TMR0IE 250F 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 _TMR0IF 258F 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+isa$xinst 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 __Hbank5 0 0 ABS 0 bank5 dist/default/production\Q43_Manchester_Encoder.production.o
 __Hbank6 0 0 ABS 0 bank6 dist/default/production\Q43_Manchester_Encoder.production.o
 __Hbank7 0 0 ABS 0 bank7 dist/default/production\Q43_Manchester_Encoder.production.o
@@ -312,12 +313,12 @@ __Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\Q43_Manchester_Encoder.produc
 __Lcomram 0 0 ABS 0 comram dist/default/production\Q43_Manchester_Encoder.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\Q43_Manchester_Encoder.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Q43_Manchester_Encoder.production.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Q43_Manchester_Encoder.production.o
-isa$std 1 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-stackhi 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 _OSCTUNE B0 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\Q43_Manchester_Encoder.production.o
 __Livt0x8 8 0 CODE 0 ivt0x8 dist/default/production\Q43_Manchester_Encoder.production.o
@@ -337,21 +338,23 @@ _OSCCON1bits AD 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.product
 __ptext0 2628 0 CODE 0 text0 dist/default/production\Q43_Manchester_Encoder.production.o
 __ptext1 2616 0 CODE 0 text1 dist/default/production\Q43_Manchester_Encoder.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\Q43_Manchester_Encoder.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\Q43_Manchester_Encoder.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Q43_Manchester_Encoder.production.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Q43_Manchester_Encoder.production.o
 __psmallconst 2600 0 SMALLCONST 0 smallconst dist/default/production\Q43_Manchester_Encoder.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Q43_Manchester_Encoder.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsc60.\driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsdnc.\driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Q43_Manchester_Encoder.production.o
 __end_of__initialization 2610 0 CODE 0 cinit dist/default/production\Q43_Manchester_Encoder.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\Q43_Manchester_Encoder.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\Q43_Manchester_Encoder.production.o
+_PWM1S1P1 46B 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
+_PWM1S1P2 46D 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 __pcstackCOMRAM 0 0 COMRAM 1 cstackCOMRAM dist/default/production\Q43_Manchester_Encoder.production.o
 _T0CON0bits 31A 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o
 _T0CON1bits 31B 0 ABS 0 - dist/default/production\Q43_Manchester_Encoder.production.o

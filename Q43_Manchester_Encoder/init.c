@@ -105,8 +105,14 @@ void INIT_PWM(){
     //PWM1PR = (Fpwmclk * Period / 2) - 1
     PWM1PR = 1665;  //PWM freq = 1/Period = 19200Hz
     
-    //Reload PWM period register
-    PWM1CONbits.LD = 1;
+    //PWM1S1Px is the number of Fpwmclk clocks in the duty cycle
+    PWM1S1P1 = 1666; 
+    PWM1S1P2 = 1666;
+
+    //PWM1 output slices operate in left aligned mode
+    PWM1S1CFGbits.MODE = 0b000;
+    
+
 }
 
 //Initialize CLC for XOR operation (Manchester encoding)

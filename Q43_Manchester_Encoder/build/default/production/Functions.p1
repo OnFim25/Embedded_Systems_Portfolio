@@ -14,6 +14,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20560
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 20560: extern volatile U5ERRIRbits_t U5ERRIRbits __attribute__((address(0x2FE)));
 [v _U5ERRIRbits `VS1014 ~T0 @X0 0 e@766 ]
+"43930
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43930:     struct {
+[s S2069 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S2069 . ERSNOW ERSPOL LD . EN ]
+"43929
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43929: typedef union {
+[u S2068 `S2069 1 ]
+[n S2068 . . ]
+"43938
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 43938: extern volatile PWM1CONbits_t PWM1CONbits __attribute__((address(0x469)));
+[v _PWM1CONbits `VS2068 ~T0 @X0 0 e@1129 ]
 "19853
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 19853: extern volatile unsigned char U5TXB __attribute__((address(0x2EF)));
 [v _U5TXB `Vuc ~T0 @X0 0 e@751 ]
@@ -2507,47 +2518,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> . . _U5ERRIRbits 0 7 `i -> 0 `i 2359  ]
 [e :U 2360 ]
 "9
-[; ;Functions.c: 9:     U5TXB = byte;
+[; ;Functions.c: 9:     PWM1CONbits.LD = 1;
+[e = . . _PWM1CONbits 0 2 -> -> 1 `i `uc ]
+"10
+[; ;Functions.c: 10:     PWM1CONbits.EN = 1;
+[e = . . _PWM1CONbits 0 4 -> -> 1 `i `uc ]
+"13
+[; ;Functions.c: 13:     U5TXB = byte;
 [e = _U5TXB -> _byte `uc ]
-"12
-[; ;Functions.c: 12:     while(!U5ERRIRbits.TXMTIF);
+"16
+[; ;Functions.c: 16:     while(!U5ERRIRbits.TXMTIF);
 [e $U 2361  ]
 [e :U 2362 ]
 [e :U 2361 ]
 [e $ ! != -> . . _U5ERRIRbits 0 7 `i -> 0 `i 2362  ]
 [e :U 2363 ]
-"14
-[; ;Functions.c: 14: }
+"18
+[; ;Functions.c: 18: }
 [e :UE 2357 ]
 }
-"16
-[; ;Functions.c: 16: void UART_SendString(char* str, unsigned size){
+"20
+[; ;Functions.c: 20: void UART_SendString(char* str, unsigned size){
 [v _UART_SendString `(v ~T0 @X0 1 ef2`*uc`ui ]
 {
 [e :U _UART_SendString ]
 [v _str `*uc ~T0 @X0 1 r1 ]
 [v _size `ui ~T0 @X0 1 r2 ]
 [f ]
-"17
-[; ;Functions.c: 17:     for(unsigned i = 0; i < size; i++){
+"21
+[; ;Functions.c: 21:     for(unsigned i = 0; i < size; i++){
 {
 [v _i `ui ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `ui ]
 [e $U 2368  ]
 [e :U 2365 ]
 {
-"18
-[; ;Functions.c: 18:         UART_SendByte(str[i]);
+"22
+[; ;Functions.c: 22:         UART_SendByte(str[i]);
 [e ( _UART_SendByte (1 *U + _str * -> _i `ux -> -> # *U _str `ui `ux ]
-"19
-[; ;Functions.c: 19:     }
+"23
+[; ;Functions.c: 23:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
 [e :U 2368 ]
 [e $ < _i _size 2365  ]
 [e :U 2366 ]
 }
-"20
-[; ;Functions.c: 20: }
+"24
+[; ;Functions.c: 24: }
 [e :UE 2364 ]
 }
