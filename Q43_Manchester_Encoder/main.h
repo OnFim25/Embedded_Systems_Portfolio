@@ -14,6 +14,7 @@ extern "C" {
 
 #include <xc.h>
 #include "init.h"
+#include "Functions.h"
 
 
 #ifdef	__cplusplus

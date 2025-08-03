@@ -28232,6 +28232,14 @@ unsigned char __t3rd16on(void);
 
     void INIT_CLC1(void);
 # 17 "./main.h" 2
+# 1 "./Functions.h" 1
+# 15 "./Functions.h"
+# 1 "./main.h" 1
+# 16 "./Functions.h" 2
+
+void UART_SendByte(char);
+void UART_SendString(char*, unsigned);
+# 18 "./main.h" 2
 # 66 "main.c" 2
 
 void main(void) {

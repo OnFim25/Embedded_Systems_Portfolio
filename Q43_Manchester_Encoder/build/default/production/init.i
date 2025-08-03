@@ -28179,6 +28179,14 @@ unsigned char __t3rd16on(void);
 
     void INIT_CLC1(void);
 # 17 "./main.h" 2
+# 1 "./Functions.h" 1
+# 15 "./Functions.h"
+# 1 "./main.h" 1
+# 16 "./Functions.h" 2
+
+void UART_SendByte(char);
+void UART_SendString(char*, unsigned);
+# 18 "./main.h" 2
 # 2 "init.c" 2
 
 void INIT_SYSTEM(){
@@ -28253,6 +28261,41 @@ void INIT_INTERRUPTS(){
 
     INTCON0bits.GIE = 1;
 
+}
+
+void INIT_UART5(){
+
+    U5BRG = 416;
+
+
+    U5CON0bits.BRGS = 0;
+
+
+    U5CON0bits.TXEN = 1;
+
+
+    U5CON0bits.MODE = 0b0000;
+
+
+    U5CON2bits.TXPOL = 0;
+
+
+    U5CON1bits.ON = 1;
+}
+
+
+void INIT_PWM(){
+
+    PWM1ERS = 0b11111;
+
+
+    PWM1CLK = 0b00010;
+
+
+    PWM1PR = 1665;
+
+
+    PWM1CONbits.LD = 1;
 }
 
 

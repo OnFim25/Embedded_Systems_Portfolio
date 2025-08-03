@@ -1,4 +1,4 @@
-# 1 "ISR.c"
+# 1 "Functions.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "ISR.c" 2
+# 1 "Functions.c" 2
 # 1 "./main.h" 1
 # 15 "./main.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -28187,10 +28187,23 @@ unsigned char __t3rd16on(void);
 void UART_SendByte(char);
 void UART_SendString(char*, unsigned);
 # 18 "./main.h" 2
-# 2 "ISR.c" 2
+# 2 "Functions.c" 2
 
-void __attribute__((picinterrupt(("")))) ISR(){
-    if(TMR0IF){
-        TMR0IF = 0;
+
+void UART_SendByte(char byte){
+
+    while(!U5ERRIRbits.TXMTIF);
+
+
+    U5TXB = byte;
+
+
+    while(!U5ERRIRbits.TXMTIF);
+
+}
+
+void UART_SendString(char* str, unsigned size){
+    for(unsigned i = 0; i < size; i++){
+        UART_SendByte(str[i]);
     }
 }

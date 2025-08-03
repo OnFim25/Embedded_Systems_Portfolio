@@ -74,6 +74,41 @@ void INIT_INTERRUPTS(){
     
 }
 
+void INIT_UART5(){
+    //U5BRG = Fosc/[16(BaudRate)]-1; if BRGS = 0
+    U5BRG = 416; //BaudRate = 9600
+    
+    //Baud rate generator works in normal speed
+    U5CON0bits.BRGS = 0;
+    
+    //Transmission is enabled
+    U5CON0bits.TXEN = 1;
+    
+    //Asynchronous 8-bit UART mode
+    U5CON0bits.MODE = 0b0000;
+    
+    //Output data are not inverted, TX output is high in Idle state
+    U5CON2bits.TXPOL = 0;
+    
+    //Enable UART5 module
+    U5CON1bits.ON = 1;
+}
+
+/*For correct manchester encoding, PWM should have twice the data frequency*/
+void INIT_PWM(){
+    //No PWM external trigger sources
+    PWM1ERS = 0b11111;
+    
+    //PWM clock source = FOSC
+    PWM1CLK = 0b00010;
+    
+    //PWM1PR = (Fpwmclk * Period / 2) - 1
+    PWM1PR = 1665;  //PWM freq = 1/Period = 19200Hz
+    
+    //Reload PWM period register
+    PWM1CONbits.LD = 1;
+}
+
 //Initialize CLC for XOR operation (Manchester encoding)
 void INIT_CLC1(){
     //CLC registers of instance CLCSELECT+1 are selected ie; CLC1

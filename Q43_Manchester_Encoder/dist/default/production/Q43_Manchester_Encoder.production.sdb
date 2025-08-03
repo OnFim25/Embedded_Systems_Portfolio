@@ -27,6 +27,8 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
+"4 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\Functions.c
+[v _UART_SendByte UART_SendByte `(v  1 e 1 0 ]
 "13 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\init.c
 [v _INIT_OSC INIT_OSC `(v  1 e 1 0 ]
 "39
@@ -83,7 +85,7 @@
 [v _OSCENbits OSCENbits `VES82  1 e 1 @179 ]
 "6343
 [v _CLCSELECT CLCSELECT `VEuc  1 e 1 @213 ]
-[s S255 . 1 `uc 1 MODE 1 0 :3:0 
+[s S414 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 INTN 1 0 :1:3 
 `uc 1 INTP 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
@@ -91,13 +93,13 @@
 `uc 1 EN 1 0 :1:7 
 ]
 "6403
-[s S262 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S255 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 ]
-[u S266 . 1 `S255 1 . 1 0 `S262 1 . 1 0 ]
-[v _CLCnCONbits CLCnCONbits `VES266  1 e 1 @214 ]
-[s S281 . 1 `uc 1 G1POL 1 0 :1:0 
+[u S425 . 1 `S414 1 . 1 0 `S255 1 . 1 0 ]
+[v _CLCnCONbits CLCnCONbits `VES425  1 e 1 @214 ]
+[s S440 . 1 `uc 1 G1POL 1 0 :1:0 
 `uc 1 G2POL 1 0 :1:1 
 `uc 1 G3POL 1 0 :1:2 
 `uc 1 G4POL 1 0 :1:3 
@@ -105,8 +107,8 @@
 `uc 1 POL 1 0 :1:7 
 ]
 "6468
-[u S288 . 1 `S281 1 . 1 0 ]
-[v _CLCnPOLbits CLCnPOLbits `VES288  1 e 1 @215 ]
+[u S447 . 1 `S440 1 . 1 0 ]
+[v _CLCnPOLbits CLCnPOLbits `VES447  1 e 1 @215 ]
 "6498
 [v _CLCnSEL0 CLCnSEL0 `VEuc  1 e 1 @216 ]
 "6568
@@ -119,6 +121,98 @@
 [v _CLCnGLS2 CLCnGLS2 `VEuc  1 e 1 @222 ]
 "6964
 [v _CLCnGLS3 CLCnGLS3 `VEuc  1 e 1 @223 ]
+"19853
+[v _U5TXB U5TXB `VEuc  1 e 1 @751 ]
+"20003
+[s S259 . 1 `uc 1 U5MODE 1 0 :4:0 
+`uc 1 U5RXEN 1 0 :1:4 
+`uc 1 U5TXEN 1 0 :1:5 
+`uc 1 U5ABDEN 1 0 :1:6 
+`uc 1 U5BRGS 1 0 :1:7 
+]
+[s S265 . 1 `uc 1 U5MODE0 1 0 :1:0 
+`uc 1 U5MODE1 1 0 :1:1 
+`uc 1 U5MODE2 1 0 :1:2 
+]
+[s S269 . 1 `uc 1 MODE 1 0 :4:0 
+`uc 1 RXEN 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 ABDEN 1 0 :1:6 
+`uc 1 BRGS 1 0 :1:7 
+]
+[u S275 . 1 `S255 1 . 1 0 `S259 1 . 1 0 `S265 1 . 1 0 `S269 1 . 1 0 ]
+[v _U5CON0bits U5CON0bits `VES275  1 e 1 @759 ]
+[s S359 . 1 `uc 1 SENDB 1 0 :1:0 
+`uc 1 BRKOVR 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 RXBIMD 1 0 :1:3 
+`uc 1 WUE 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 ON 1 0 :1:7 
+]
+"20113
+[s S367 . 1 `uc 1 U5SENDB 1 0 :1:0 
+`uc 1 U5BRKOVR 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 U5RXBIMD 1 0 :1:3 
+`uc 1 U5WUE 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 U5ON 1 0 :1:7 
+]
+[u S375 . 1 `S359 1 . 1 0 `S367 1 . 1 0 ]
+[v _U5CON1bits U5CON1bits `VES375  1 e 1 @760 ]
+[s S301 . 1 `uc 1 FLO 1 0 :2:0 
+`uc 1 TXPOL 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 STP 1 0 :2:4 
+`uc 1 RXPOL 1 0 :1:6 
+`uc 1 RUNOVF 1 0 :1:7 
+]
+"20205
+[s S308 . 1 `uc 1 FLO0 1 0 :1:0 
+`uc 1 FLO1 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 STP0 1 0 :1:4 
+`uc 1 STP1 1 0 :1:5 
+]
+[s S314 . 1 `uc 1 U5FLO 1 0 :2:0 
+`uc 1 U5TXPOL 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 U5STP 1 0 :2:4 
+`uc 1 U5RXPOL 1 0 :1:6 
+`uc 1 U5RUNOVF 1 0 :1:7 
+]
+[s S321 . 1 `uc 1 U5FLO0 1 0 :1:0 
+`uc 1 U5FLO1 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 U5STP0 1 0 :1:4 
+`uc 1 U5STP1 1 0 :1:5 
+]
+[u S327 . 1 `S301 1 . 1 0 `S308 1 . 1 0 `S314 1 . 1 0 `S321 1 . 1 0 ]
+[v _U5CON2bits U5CON2bits `VES327  1 e 1 @761 ]
+"20300
+[v _U5BRG U5BRG `VEus  1 e 2 @762 ]
+[s S545 . 1 `uc 1 TXCIF 1 0 :1:0 
+`uc 1 RXFOIF 1 0 :1:1 
+`uc 1 RXBKIF 1 0 :1:2 
+`uc 1 FERIF 1 0 :1:3 
+`uc 1 CERIF 1 0 :1:4 
+`uc 1 ABDOVF 1 0 :1:5 
+`uc 1 PERIF 1 0 :1:6 
+`uc 1 TXMTIF 1 0 :1:7 
+]
+"20560
+[s S554 . 1 `uc 1 U5TXCIF 1 0 :1:0 
+`uc 1 U5RXFOIF 1 0 :1:1 
+`uc 1 U5RXBKIF 1 0 :1:2 
+`uc 1 U5FERIF 1 0 :1:3 
+`uc 1 U5CERIF 1 0 :1:4 
+`uc 1 U5ABDOVF 1 0 :1:5 
+`uc 1 U5PERIF 1 0 :1:6 
+`uc 1 U5TXMTIF 1 0 :1:7 
+]
+[u S563 . 1 `S545 1 . 1 0 `S554 1 . 1 0 ]
+[v _U5ERRIRbits U5ERRIRbits `VES563  1 e 1 @766 ]
 "22314
 [v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
 [s S173 . 1 `uc 1 OUTPS 1 0 :4:0 
@@ -176,6 +270,23 @@
 ]
 [u S141 . 1 `S115 1 . 1 0 `S119 1 . 1 0 `S128 1 . 1 0 `S132 1 . 1 0 ]
 [v _T0CON1bits T0CON1bits `VES141  1 e 1 @795 ]
+"43575
+[v _PWM1ERS PWM1ERS `VEuc  1 e 1 @1120 ]
+"43645
+[v _PWM1CLK PWM1CLK `VEuc  1 e 1 @1121 ]
+"43785
+[v _PWM1PR PWM1PR `VEus  1 e 2 @1123 ]
+[s S398 . 1 `uc 1 ERSNOW 1 0 :1:0 
+`uc 1 ERSPOL 1 0 :1:1 
+`uc 1 LD 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"43938
+[u S404 . 1 `S398 1 . 1 0 ]
+"43938
+"43938
+[v _PWM1CONbits PWM1CONbits `VES404  1 e 1 @1129 ]
 [s S226 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 

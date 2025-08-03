@@ -8,6 +8,7 @@
       <itemPath>init.h</itemPath>
       <itemPath>ISR.h</itemPath>
       <itemPath>defines.h</itemPath>
+      <itemPath>Functions.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -24,6 +25,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>init.c</itemPath>
       <itemPath>ISR.c</itemPath>
+      <itemPath>Functions.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/main.h</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/ISR.c</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/Functions.h</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/init.c</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/I2C.c</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/main.c</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/init.h</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/ISR.h</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/I2C.h</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/Functions.c</file>
-            <file>file:/E:/Programming/Git%20codes/PIC_Controllers/Q43_OLED_interface/defines.h</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
