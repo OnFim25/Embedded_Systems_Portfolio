@@ -1,11 +1,18 @@
 #include "main.h"
 
+//All essensial module initialisation
 void INIT_SYSTEM(){
     INIT_OSC();
     
     CONFIGURE_PINS();
     
     INIT_TIMER0();
+    
+    INIT_UART5();
+    INIT_PWM();
+    
+    INIT_CLC1();
+    
     INIT_INTERRUPTS();
 }
 
@@ -31,6 +38,7 @@ void INIT_OSC(){
 }
 
 /*
+ * FOSC = 64MHz
  * clock source : FOSC/4
  * Post scalar  : 4
  * pre scalar   : 16
@@ -56,7 +64,12 @@ void INIT_TIMER0(){
 }
 
 void CONFIGURE_PINS(){
+    //Configure RC0 as digital pin
+    ANSELCbits.ANSELC0 = 0; 
+    TRISCbits.TRISC0 = 1;//Tris must be set to high impedence mode when no data is sending
     
+    //RC0 is selected as the CLC1 output
+    RC0PPS = 0x01;
 }
 
 void INIT_INTERRUPTS(){
@@ -134,10 +147,10 @@ void INIT_CLC1(){
     
     //Only gates 1&3 output the data for OR_XOR cell inputs inputs are selected
     //Other gates must output 0 so that they won't interfere at the OR gate of the Cell
-    CLCnGLS0 = 0b00000010;
+    CLCnGLS0 = 0b00000010;  //UART TX buffer
     CLCnGLS1 = 0b00000000;
     
-    CLCnGLS2 = 0b00001000;
+    CLCnGLS2 = 0b00001000;  //PWM output
     CLCnGLS3 = 0b00000000;
     
     

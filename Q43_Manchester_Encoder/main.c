@@ -64,6 +64,26 @@
 
 #include "main.h"
 
+char dataString[] = "Hello world\0";
+
+/****************************************************
+ * Data flow of Manchester Encoder using PIC18F27Q43*
+ * UART5TX buffer -> CLC1 Module -> RC0 output pin  *
+ *                      ^                           *
+ *                      |                           *
+ *                   PWM signal                     *
+ *                                                  *
+ * **************************************************
+ */
+
 void main(void) {
+    
+    //Initialize modules
+    INIT_SYSTEM();
+    while(1){
+        //Repeatedly send data string every 3 seconds
+        UART_SendString(dataString, 12);
+        delay_msec(3000);
+    }
     return;
 }

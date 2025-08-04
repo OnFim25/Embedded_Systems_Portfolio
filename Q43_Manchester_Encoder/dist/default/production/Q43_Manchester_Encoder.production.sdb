@@ -27,25 +27,37 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"4 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\Functions.c
+"3 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\Functions.c
+[v _delay_msec delay_msec `(v  1 e 1 0 ]
+"9
 [v _UART_SendByte UART_SendByte `(v  1 e 1 0 ]
-"13 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\init.c
+"34
+[v _UART_SendString UART_SendString `(v  1 e 1 0 ]
+"4 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\init.c
+[v _INIT_SYSTEM INIT_SYSTEM `(v  1 e 1 0 ]
+"20
 [v _INIT_OSC INIT_OSC `(v  1 e 1 0 ]
-"39
+"47
 [v _INIT_TIMER0 INIT_TIMER0 `(v  1 e 1 0 ]
-"58
+"66
 [v _CONFIGURE_PINS CONFIGURE_PINS `(v  1 e 1 0 ]
-"62
+"75
 [v _INIT_INTERRUPTS INIT_INTERRUPTS `(v  1 e 1 0 ]
-"3 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\ISR.c
+"90
+[v _INIT_UART5 INIT_UART5 `(v  1 e 1 0 ]
+"111
+[v _INIT_PWM INIT_PWM `(v  1 e 1 0 ]
+"132
+[v _INIT_CLC1 INIT_CLC1 `(v  1 e 1 0 ]
+"7 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\ISR.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"67 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\main.c
+"79 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\main.c
 [v _main main `(v  1 e 1 0 ]
-[s S45 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S73 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5172 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h
-[s S48 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S76 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -53,13 +65,13 @@
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S56 . 1 `S45 1 . 1 0 `S48 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES56  1 e 1 @173 ]
+[u S84 . 1 `S73 1 . 1 0 `S76 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES84  1 e 1 @173 ]
 "5332
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @176 ]
 "5390
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
-[s S94 . 1 `uc 1 PLLR 1 0 :1:0 
+[s S122 . 1 `uc 1 PLLR 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADOR 1 0 :1:2 
 `uc 1 SOR 1 0 :1:3 
@@ -69,9 +81,9 @@
 `uc 1 EXTOR 1 0 :1:7 
 ]
 "5502
-[u S103 . 1 `S94 1 . 1 0 ]
-[v _OSCSTATbits OSCSTATbits `VES103  1 e 1 @178 ]
-[s S73 . 1 `uc 1 PLLEN 1 0 :1:0 
+[u S131 . 1 `S122 1 . 1 0 ]
+[v _OSCSTATbits OSCSTATbits `VES131  1 e 1 @178 ]
+[s S101 . 1 `uc 1 PLLEN 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADOEN 1 0 :1:2 
 `uc 1 SOSCEN 1 0 :1:3 
@@ -81,11 +93,11 @@
 `uc 1 EXTOEN 1 0 :1:7 
 ]
 "5609
-[u S82 . 1 `S73 1 . 1 0 ]
-[v _OSCENbits OSCENbits `VES82  1 e 1 @179 ]
+[u S110 . 1 `S101 1 . 1 0 ]
+[v _OSCENbits OSCENbits `VES110  1 e 1 @179 ]
 "6343
 [v _CLCSELECT CLCSELECT `VEuc  1 e 1 @213 ]
-[s S425 . 1 `uc 1 MODE 1 0 :3:0 
+[s S496 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 INTN 1 0 :1:3 
 `uc 1 INTP 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
@@ -93,13 +105,13 @@
 `uc 1 EN 1 0 :1:7 
 ]
 "6403
-[s S255 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S326 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 ]
-[u S436 . 1 `S425 1 . 1 0 `S255 1 . 1 0 ]
-[v _CLCnCONbits CLCnCONbits `VES436  1 e 1 @214 ]
-[s S451 . 1 `uc 1 G1POL 1 0 :1:0 
+[u S507 . 1 `S496 1 . 1 0 `S326 1 . 1 0 ]
+[v _CLCnCONbits CLCnCONbits `VES507  1 e 1 @214 ]
+[s S522 . 1 `uc 1 G1POL 1 0 :1:0 
 `uc 1 G2POL 1 0 :1:1 
 `uc 1 G3POL 1 0 :1:2 
 `uc 1 G4POL 1 0 :1:3 
@@ -107,8 +119,8 @@
 `uc 1 POL 1 0 :1:7 
 ]
 "6468
-[u S458 . 1 `S451 1 . 1 0 ]
-[v _CLCnPOLbits CLCnPOLbits `VES458  1 e 1 @215 ]
+[u S529 . 1 `S522 1 . 1 0 ]
+[v _CLCnPOLbits CLCnPOLbits `VES529  1 e 1 @215 ]
 "6498
 [v _CLCnSEL0 CLCnSEL0 `VEuc  1 e 1 @216 ]
 "6568
@@ -121,28 +133,30 @@
 [v _CLCnGLS2 CLCnGLS2 `VEuc  1 e 1 @222 ]
 "6964
 [v _CLCnGLS3 CLCnGLS3 `VEuc  1 e 1 @223 ]
+"9482
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @529 ]
 "19853
 [v _U5TXB U5TXB `VEuc  1 e 1 @751 ]
 "20003
-[s S259 . 1 `uc 1 U5MODE 1 0 :4:0 
+[s S330 . 1 `uc 1 U5MODE 1 0 :4:0 
 `uc 1 U5RXEN 1 0 :1:4 
 `uc 1 U5TXEN 1 0 :1:5 
 `uc 1 U5ABDEN 1 0 :1:6 
 `uc 1 U5BRGS 1 0 :1:7 
 ]
-[s S265 . 1 `uc 1 U5MODE0 1 0 :1:0 
+[s S336 . 1 `uc 1 U5MODE0 1 0 :1:0 
 `uc 1 U5MODE1 1 0 :1:1 
 `uc 1 U5MODE2 1 0 :1:2 
 ]
-[s S269 . 1 `uc 1 MODE 1 0 :4:0 
+[s S340 . 1 `uc 1 MODE 1 0 :4:0 
 `uc 1 RXEN 1 0 :1:4 
 `uc 1 TXEN 1 0 :1:5 
 `uc 1 ABDEN 1 0 :1:6 
 `uc 1 BRGS 1 0 :1:7 
 ]
-[u S275 . 1 `S255 1 . 1 0 `S259 1 . 1 0 `S265 1 . 1 0 `S269 1 . 1 0 ]
-[v _U5CON0bits U5CON0bits `VES275  1 e 1 @759 ]
-[s S359 . 1 `uc 1 SENDB 1 0 :1:0 
+[u S346 . 1 `S326 1 . 1 0 `S330 1 . 1 0 `S336 1 . 1 0 `S340 1 . 1 0 ]
+[v _U5CON0bits U5CON0bits `VES346  1 e 1 @759 ]
+[s S430 . 1 `uc 1 SENDB 1 0 :1:0 
 `uc 1 BRKOVR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 RXBIMD 1 0 :1:3 
@@ -151,7 +165,7 @@
 `uc 1 ON 1 0 :1:7 
 ]
 "20113
-[s S367 . 1 `uc 1 U5SENDB 1 0 :1:0 
+[s S438 . 1 `uc 1 U5SENDB 1 0 :1:0 
 `uc 1 U5BRKOVR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 U5RXBIMD 1 0 :1:3 
@@ -159,9 +173,9 @@
 `uc 1 . 1 0 :2:5 
 `uc 1 U5ON 1 0 :1:7 
 ]
-[u S375 . 1 `S359 1 . 1 0 `S367 1 . 1 0 ]
-[v _U5CON1bits U5CON1bits `VES375  1 e 1 @760 ]
-[s S301 . 1 `uc 1 FLO 1 0 :2:0 
+[u S446 . 1 `S430 1 . 1 0 `S438 1 . 1 0 ]
+[v _U5CON1bits U5CON1bits `VES446  1 e 1 @760 ]
+[s S372 . 1 `uc 1 FLO 1 0 :2:0 
 `uc 1 TXPOL 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 STP 1 0 :2:4 
@@ -169,30 +183,30 @@
 `uc 1 RUNOVF 1 0 :1:7 
 ]
 "20205
-[s S308 . 1 `uc 1 FLO0 1 0 :1:0 
+[s S379 . 1 `uc 1 FLO0 1 0 :1:0 
 `uc 1 FLO1 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 STP0 1 0 :1:4 
 `uc 1 STP1 1 0 :1:5 
 ]
-[s S314 . 1 `uc 1 U5FLO 1 0 :2:0 
+[s S385 . 1 `uc 1 U5FLO 1 0 :2:0 
 `uc 1 U5TXPOL 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 U5STP 1 0 :2:4 
 `uc 1 U5RXPOL 1 0 :1:6 
 `uc 1 U5RUNOVF 1 0 :1:7 
 ]
-[s S321 . 1 `uc 1 U5FLO0 1 0 :1:0 
+[s S392 . 1 `uc 1 U5FLO0 1 0 :1:0 
 `uc 1 U5FLO1 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 U5STP0 1 0 :1:4 
 `uc 1 U5STP1 1 0 :1:5 
 ]
-[u S327 . 1 `S301 1 . 1 0 `S308 1 . 1 0 `S314 1 . 1 0 `S321 1 . 1 0 ]
-[v _U5CON2bits U5CON2bits `VES327  1 e 1 @761 ]
+[u S398 . 1 `S372 1 . 1 0 `S379 1 . 1 0 `S385 1 . 1 0 `S392 1 . 1 0 ]
+[v _U5CON2bits U5CON2bits `VES398  1 e 1 @761 ]
 "20300
 [v _U5BRG U5BRG `VEus  1 e 2 @762 ]
-[s S556 . 1 `uc 1 TXCIF 1 0 :1:0 
+[s S646 . 1 `uc 1 TXCIF 1 0 :1:0 
 `uc 1 RXFOIF 1 0 :1:1 
 `uc 1 RXBKIF 1 0 :1:2 
 `uc 1 FERIF 1 0 :1:3 
@@ -202,7 +216,7 @@
 `uc 1 TXMTIF 1 0 :1:7 
 ]
 "20560
-[s S565 . 1 `uc 1 U5TXCIF 1 0 :1:0 
+[s S655 . 1 `uc 1 U5TXCIF 1 0 :1:0 
 `uc 1 U5RXFOIF 1 0 :1:1 
 `uc 1 U5RXBKIF 1 0 :1:2 
 `uc 1 U5FERIF 1 0 :1:3 
@@ -211,42 +225,42 @@
 `uc 1 U5PERIF 1 0 :1:6 
 `uc 1 U5TXMTIF 1 0 :1:7 
 ]
-[u S574 . 1 `S556 1 . 1 0 `S565 1 . 1 0 ]
-[v _U5ERRIRbits U5ERRIRbits `VES574  1 e 1 @766 ]
+[u S664 . 1 `S646 1 . 1 0 `S655 1 . 1 0 ]
+[v _U5ERRIRbits U5ERRIRbits `VES664  1 e 1 @766 ]
 "22314
 [v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
-[s S173 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S201 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "22602
-[s S179 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S207 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S185 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S213 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[s S191 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S219 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S196 . 1 `S173 1 . 1 0 `S179 1 . 1 0 `S185 1 . 1 0 `S191 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES196  1 e 1 @794 ]
-[s S115 . 1 `uc 1 CKPS 1 0 :4:0 
+[u S224 . 1 `S201 1 . 1 0 `S207 1 . 1 0 `S213 1 . 1 0 `S219 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES224  1 e 1 @794 ]
+[s S143 . 1 `uc 1 CKPS 1 0 :4:0 
 `uc 1 ASYNC 1 0 :1:4 
 `uc 1 CS 1 0 :3:5 
 ]
 "22729
-[s S119 . 1 `uc 1 CKPS0 1 0 :1:0 
+[s S147 . 1 `uc 1 CKPS0 1 0 :1:0 
 `uc 1 CKPS1 1 0 :1:1 
 `uc 1 CKPS2 1 0 :1:2 
 `uc 1 CKPS3 1 0 :1:3 
@@ -255,11 +269,11 @@
 `uc 1 CS1 1 0 :1:6 
 `uc 1 CS2 1 0 :1:7 
 ]
-[s S128 . 1 `uc 1 T0CKPS 1 0 :4:0 
+[s S156 . 1 `uc 1 T0CKPS 1 0 :4:0 
 `uc 1 . 1 0 :1:4 
 `uc 1 T0CS 1 0 :3:5 
 ]
-[s S132 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+[s S160 . 1 `uc 1 T0CKPS0 1 0 :1:0 
 `uc 1 T0CKPS1 1 0 :1:1 
 `uc 1 T0CKPS2 1 0 :1:2 
 `uc 1 T0CKPS3 1 0 :1:3 
@@ -268,26 +282,40 @@
 `uc 1 T0CS1 1 0 :1:6 
 `uc 1 T0CS2 1 0 :1:7 
 ]
-[u S141 . 1 `S115 1 . 1 0 `S119 1 . 1 0 `S128 1 . 1 0 `S132 1 . 1 0 ]
-[v _T0CON1bits T0CON1bits `VES141  1 e 1 @795 ]
+[u S169 . 1 `S143 1 . 1 0 `S147 1 . 1 0 `S156 1 . 1 0 `S160 1 . 1 0 ]
+[v _T0CON1bits T0CON1bits `VES169  1 e 1 @795 ]
+[s S254 . 1 `uc 1 ANSELC0 1 0 :1:0 
+`uc 1 ANSELC1 1 0 :1:1 
+`uc 1 ANSELC2 1 0 :1:2 
+`uc 1 ANSELC3 1 0 :1:3 
+`uc 1 ANSELC4 1 0 :1:4 
+`uc 1 ANSELC5 1 0 :1:5 
+`uc 1 ANSELC6 1 0 :1:6 
+`uc 1 ANSELC7 1 0 :1:7 
+]
+"39902
+[u S263 . 1 `S254 1 . 1 0 ]
+"39902
+"39902
+[v _ANSELCbits ANSELCbits `VES263  1 e 1 @1040 ]
 "43575
 [v _PWM1ERS PWM1ERS `VEuc  1 e 1 @1120 ]
 "43645
 [v _PWM1CLK PWM1CLK `VEuc  1 e 1 @1121 ]
 "43785
 [v _PWM1PR PWM1PR `VEus  1 e 2 @1123 ]
-[s S596 . 1 `uc 1 ERSNOW 1 0 :1:0 
+[s S698 . 1 `uc 1 ERSNOW 1 0 :1:0 
 `uc 1 ERSPOL 1 0 :1:1 
 `uc 1 LD 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 EN 1 0 :1:7 
 ]
 "43938
-[u S602 . 1 `S596 1 . 1 0 ]
+[u S704 . 1 `S698 1 . 1 0 ]
 "43938
 "43938
-[v _PWM1CONbits PWM1CONbits `VES602  1 e 1 @1129 ]
-[s S400 . 1 `uc 1 MODE 1 0 :3:0 
+[v _PWM1CONbits PWM1CONbits `VES704  1 e 1 @1129 ]
+[s S471 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 PPEN 1 0 :1:3 
 `uc 1 . 1 0 :2:4 
 `uc 1 POL1 1 0 :1:6 
@@ -295,15 +323,29 @@
 ]
 "43982
 "43982
-[u S410 . 1 `S400 1 . 1 0 `S255 1 . 1 0 ]
+[u S481 . 1 `S471 1 . 1 0 `S326 1 . 1 0 ]
 "43982
 "43982
-[v _PWM1S1CFGbits PWM1S1CFGbits `VES410  1 e 1 @1130 ]
+[v _PWM1S1CFGbits PWM1S1CFGbits `VES481  1 e 1 @1130 ]
 "44022
 [v _PWM1S1P1 PWM1S1P1 `VEus  1 e 2 @1131 ]
 "44069
 [v _PWM1S1P2 PWM1S1P2 `VEus  1 e 2 @1133 ]
-[s S226 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S275 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"47406
+[u S284 . 1 `S275 1 . 1 0 ]
+"47406
+"47406
+[v _TRISCbits TRISCbits `VES284  1 e 1 @1224 ]
+[s S297 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -312,25 +354,95 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "47809
-[s S234 . 1 `uc 1 . 1 0 :7:0 
+[s S305 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "47809
-[u S237 . 1 `S226 1 . 1 0 `S234 1 . 1 0 ]
+[u S308 . 1 `S297 1 . 1 0 `S305 1 . 1 0 ]
 "47809
 "47809
-[v _INTCON0bits INTCON0bits `VES237  1 e 1 @1238 ]
+[v _INTCON0bits INTCON0bits `VES308  1 e 1 @1238 ]
 "58495
 [v _TMR0IE TMR0IE `VEb  1 e 0 @9487 ]
 "58498
 [v _TMR0IF TMR0IF `VEb  1 e 0 @9615 ]
+"3 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\ISR.c
+[v _ticks ticks `VEul  1 e 4 0 ]
+"4
+[v _delayCount delayCount `VEul  1 e 4 0 ]
 "67 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\main.c
+[v _dataString dataString `[13]uc  1 e 13 0 ]
+"79
 [v _main main `(v  1 e 1 0 ]
 {
-"69
+"89
 } 0
-"3 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\ISR.c
+"3 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\Functions.c
+[v _delay_msec delay_msec `(v  1 e 1 0 ]
+{
+[v delay_msec@ms ms `ui  1 p 2 0 ]
+"6
+} 0
+"34
+[v _UART_SendString UART_SendString `(v  1 e 1 0 ]
+{
+"35
+[v UART_SendString@i i `ui  1 a 2 5 ]
+"34
+[v UART_SendString@str str `*.39uc  1 p 2 1 ]
+[v UART_SendString@size size `ui  1 p 2 3 ]
+"38
+} 0
+"9
+[v _UART_SendByte UART_SendByte `(v  1 e 1 0 ]
+{
+[v UART_SendByte@byte byte `uc  1 p 1 wreg ]
+[v UART_SendByte@byte byte `uc  1 p 1 wreg ]
+[v UART_SendByte@byte byte `uc  1 p 1 0 ]
+"32
+} 0
+"4 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\init.c
+[v _INIT_SYSTEM INIT_SYSTEM `(v  1 e 1 0 ]
+{
+"17
+} 0
+"90
+[v _INIT_UART5 INIT_UART5 `(v  1 e 1 0 ]
+{
+"108
+} 0
+"47
+[v _INIT_TIMER0 INIT_TIMER0 `(v  1 e 1 0 ]
+{
+"64
+} 0
+"111
+[v _INIT_PWM INIT_PWM `(v  1 e 1 0 ]
+{
+"129
+} 0
+"20
+[v _INIT_OSC INIT_OSC `(v  1 e 1 0 ]
+{
+"38
+} 0
+"75
+[v _INIT_INTERRUPTS INIT_INTERRUPTS `(v  1 e 1 0 ]
+{
+"88
+} 0
+"132
+[v _INIT_CLC1 INIT_CLC1 `(v  1 e 1 0 ]
+{
+"160
+} 0
+"66
+[v _CONFIGURE_PINS CONFIGURE_PINS `(v  1 e 1 0 ]
+{
+"73
+} 0
+"7 E:\Programming\Git codes\PIC_Controllers\Q43_Manchester_Encoder\ISR.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"7
+"13
 } 0

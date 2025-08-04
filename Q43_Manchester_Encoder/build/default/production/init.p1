@@ -8,6 +8,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22
 [; ;./init.h: 22:     void INIT_TIMER0(void);
 [v _INIT_TIMER0 `(v ~T0 @X0 0 ef ]
+"26
+[; ;./init.h: 26:     void INIT_UART5(void);
+[v _INIT_UART5 `(v ~T0 @X0 0 ef ]
+"27
+[; ;./init.h: 27:     void INIT_PWM(void);
+[v _INIT_PWM `(v ~T0 @X0 0 ef ]
+"25
+[; ;./init.h: 25:     void INIT_CLC1(void);
+[v _INIT_CLC1 `(v ~T0 @X0 0 ef ]
 "23
 [; ;./init.h: 23:     void INIT_INTERRUPTS(void);
 [v _INIT_INTERRUPTS `(v ~T0 @X0 0 ef ]
@@ -103,6 +112,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22314
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 22314: extern volatile unsigned char TMR0H __attribute__((address(0x319)));
 [v _TMR0H `Vuc ~T0 @X0 0 e@793 ]
+"39891
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 39891:     struct {
+[s S1894 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1894 . ANSELC0 ANSELC1 ANSELC2 ANSELC3 ANSELC4 ANSELC5 ANSELC6 ANSELC7 ]
+"39890
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 39890: typedef union {
+[u S1893 `S1894 1 ]
+[n S1893 . . ]
+"39902
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 39902: extern volatile ANSELCbits_t ANSELCbits __attribute__((address(0x410)));
+[v _ANSELCbits `VS1893 ~T0 @X0 0 e@1040 ]
+"47395
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 47395:     struct {
+[s S2230 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2230 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"47394
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 47394: typedef union {
+[u S2229 `S2230 1 ]
+[n S2229 . . ]
+"47406
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 47406: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x4C8)));
+[v _TRISCbits `VS2229 ~T0 @X0 0 e@1224 ]
+"9482
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 9482: extern volatile unsigned char RC0PPS __attribute__((address(0x211)));
+[v _RC0PPS `Vuc ~T0 @X0 0 e@529 ]
 "47795
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 47795:     struct {
 [s S2244 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2740,210 +2774,228 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49067
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 49067: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"3 init.c
-[; ;init.c: 3: void INIT_SYSTEM(){
+"4 init.c
+[; ;init.c: 4: void INIT_SYSTEM(){
 [v _INIT_SYSTEM `(v ~T0 @X0 1 ef ]
 {
 [e :U _INIT_SYSTEM ]
 [f ]
-"4
-[; ;init.c: 4:     INIT_OSC();
+"5
+[; ;init.c: 5:     INIT_OSC();
 [e ( _INIT_OSC ..  ]
-"6
-[; ;init.c: 6:     CONFIGURE_PINS();
+"7
+[; ;init.c: 7:     CONFIGURE_PINS();
 [e ( _CONFIGURE_PINS ..  ]
-"8
-[; ;init.c: 8:     INIT_TIMER0();
-[e ( _INIT_TIMER0 ..  ]
 "9
-[; ;init.c: 9:     INIT_INTERRUPTS();
+[; ;init.c: 9:     INIT_TIMER0();
+[e ( _INIT_TIMER0 ..  ]
+"11
+[; ;init.c: 11:     INIT_UART5();
+[e ( _INIT_UART5 ..  ]
+"12
+[; ;init.c: 12:     INIT_PWM();
+[e ( _INIT_PWM ..  ]
+"14
+[; ;init.c: 14:     INIT_CLC1();
+[e ( _INIT_CLC1 ..  ]
+"16
+[; ;init.c: 16:     INIT_INTERRUPTS();
 [e ( _INIT_INTERRUPTS ..  ]
-"10
-[; ;init.c: 10: }
+"17
+[; ;init.c: 17: }
 [e :UE 2357 ]
 }
-"13
-[; ;init.c: 13: void INIT_OSC(){
+"20
+[; ;init.c: 20: void INIT_OSC(){
 [v _INIT_OSC `(v ~T0 @X0 1 ef ]
 {
 [e :U _INIT_OSC ]
 [f ]
-"15
-[; ;init.c: 15:     OSCCON1bits.NOSC = 0b110;
+"22
+[; ;init.c: 22:     OSCCON1bits.NOSC = 0b110;
 [e = . . _OSCCON1bits 0 1 -> -> 6 `i `uc ]
-"18
-[; ;init.c: 18:     OSCCON1bits.NDIV= 0b0000;
+"25
+[; ;init.c: 25:     OSCCON1bits.NDIV= 0b0000;
 [e = . . _OSCCON1bits 0 0 -> -> 0 `i `uc ]
-"21
-[; ;init.c: 21:     OSCTUNE = 0b000000;
+"28
+[; ;init.c: 28:     OSCTUNE = 0b000000;
 [e = _OSCTUNE -> -> 0 `i `uc ]
-"24
-[; ;init.c: 24:     OSCFRQ = 0b1000;
+"31
+[; ;init.c: 31:     OSCFRQ = 0b1000;
 [e = _OSCFRQ -> -> 8 `i `uc ]
-"27
-[; ;init.c: 27:     OSCENbits.HFOEN = 1;
+"34
+[; ;init.c: 34:     OSCENbits.HFOEN = 1;
 [e = . . _OSCENbits 0 6 -> -> 1 `i `uc ]
-"30
-[; ;init.c: 30:     while(!OSCSTATbits.HFOR);
+"37
+[; ;init.c: 37:     while(!OSCSTATbits.HFOR);
 [e $U 2359  ]
 [e :U 2360 ]
 [e :U 2359 ]
 [e $ ! != -> . . _OSCSTATbits 0 6 `i -> 0 `i 2360  ]
 [e :U 2361 ]
-"31
-[; ;init.c: 31: }
+"38
+[; ;init.c: 38: }
 [e :UE 2358 ]
 }
-"39
-[; ;init.c: 39: void INIT_TIMER0(){
+"47
+[; ;init.c: 47: void INIT_TIMER0(){
 [v _INIT_TIMER0 `(v ~T0 @X0 1 ef ]
 {
 [e :U _INIT_TIMER0 ]
 [f ]
-"42
-[; ;init.c: 42:     T0CON1bits.CS = 0b010;
+"50
+[; ;init.c: 50:     T0CON1bits.CS = 0b010;
 [e = . . _T0CON1bits 0 2 -> -> 2 `i `uc ]
-"45
-[; ;init.c: 45:     T0CON1bits.CKPS = 0b0100;
+"53
+[; ;init.c: 53:     T0CON1bits.CKPS = 0b0100;
 [e = . . _T0CON1bits 0 0 -> -> 4 `i `uc ]
-"48
-[; ;init.c: 48:     T0CON0bits.OUTPS = 0b0011;
-[e = . . _T0CON0bits 0 0 -> -> 3 `i `uc ]
-"51
-[; ;init.c: 51:     TMR0H = 250;
-[e = _TMR0H -> -> 250 `i `uc ]
-"54
-[; ;init.c: 54:     T0CON0bits.EN = 1;
-[e = . . _T0CON0bits 0 4 -> -> 1 `i `uc ]
 "56
-[; ;init.c: 56: }
+[; ;init.c: 56:     T0CON0bits.OUTPS = 0b0011;
+[e = . . _T0CON0bits 0 0 -> -> 3 `i `uc ]
+"59
+[; ;init.c: 59:     TMR0H = 250;
+[e = _TMR0H -> -> 250 `i `uc ]
+"62
+[; ;init.c: 62:     T0CON0bits.EN = 1;
+[e = . . _T0CON0bits 0 4 -> -> 1 `i `uc ]
+"64
+[; ;init.c: 64: }
 [e :UE 2362 ]
 }
-"58
-[; ;init.c: 58: void CONFIGURE_PINS(){
+"66
+[; ;init.c: 66: void CONFIGURE_PINS(){
 [v _CONFIGURE_PINS `(v ~T0 @X0 1 ef ]
 {
 [e :U _CONFIGURE_PINS ]
 [f ]
-"60
-[; ;init.c: 60: }
+"68
+[; ;init.c: 68:     ANSELCbits.ANSELC0 = 0;
+[e = . . _ANSELCbits 0 0 -> -> 0 `i `uc ]
+"69
+[; ;init.c: 69:     TRISCbits.TRISC0 = 1;
+[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
+"72
+[; ;init.c: 72:     RC0PPS = 0x01;
+[e = _RC0PPS -> -> 1 `i `uc ]
+"73
+[; ;init.c: 73: }
 [e :UE 2363 ]
 }
-"62
-[; ;init.c: 62: void INIT_INTERRUPTS(){
+"75
+[; ;init.c: 75: void INIT_INTERRUPTS(){
 [v _INIT_INTERRUPTS `(v ~T0 @X0 1 ef ]
 {
 [e :U _INIT_INTERRUPTS ]
 [f ]
-"66
-[; ;init.c: 66:     INTCON0bits.GIE = 0;
+"79
+[; ;init.c: 79:     INTCON0bits.GIE = 0;
 [e = . . _INTCON0bits 0 6 -> -> 0 `i `uc ]
-"69
-[; ;init.c: 69:     TMR0IE = 1;
+"82
+[; ;init.c: 82:     TMR0IE = 1;
 [e = _TMR0IE -> -> 1 `i `b ]
-"70
-[; ;init.c: 70:     TMR0IF = 0;
+"83
+[; ;init.c: 83:     TMR0IF = 0;
 [e = _TMR0IF -> -> 0 `i `b ]
-"73
-[; ;init.c: 73:     INTCON0bits.GIE = 1;
+"86
+[; ;init.c: 86:     INTCON0bits.GIE = 1;
 [e = . . _INTCON0bits 0 6 -> -> 1 `i `uc ]
-"75
-[; ;init.c: 75: }
+"88
+[; ;init.c: 88: }
 [e :UE 2364 ]
 }
-"77
-[; ;init.c: 77: void INIT_UART5(){
+"90
+[; ;init.c: 90: void INIT_UART5(){
 [v _INIT_UART5 `(v ~T0 @X0 1 ef ]
 {
 [e :U _INIT_UART5 ]
 [f ]
-"79
-[; ;init.c: 79:     U5BRG = 416;
+"92
+[; ;init.c: 92:     U5BRG = 416;
 [e = _U5BRG -> -> 416 `i `us ]
-"82
-[; ;init.c: 82:     U5CON0bits.BRGS = 0;
-[e = . . _U5CON0bits 3 4 -> -> 0 `i `uc ]
-"85
-[; ;init.c: 85:     U5CON0bits.TXEN = 1;
-[e = . . _U5CON0bits 3 2 -> -> 1 `i `uc ]
-"88
-[; ;init.c: 88:     U5CON0bits.MODE = 0b0000;
-[e = . . _U5CON0bits 3 0 -> -> 0 `i `uc ]
-"91
-[; ;init.c: 91:     U5CON2bits.TXPOL = 0;
-[e = . . _U5CON2bits 0 1 -> -> 0 `i `uc ]
-"94
-[; ;init.c: 94:     U5CON1bits.ON = 1;
-[e = . . _U5CON1bits 0 6 -> -> 1 `i `uc ]
 "95
-[; ;init.c: 95: }
+[; ;init.c: 95:     U5CON0bits.BRGS = 0;
+[e = . . _U5CON0bits 3 4 -> -> 0 `i `uc ]
+"98
+[; ;init.c: 98:     U5CON0bits.TXEN = 1;
+[e = . . _U5CON0bits 3 2 -> -> 1 `i `uc ]
+"101
+[; ;init.c: 101:     U5CON0bits.MODE = 0b0000;
+[e = . . _U5CON0bits 3 0 -> -> 0 `i `uc ]
+"104
+[; ;init.c: 104:     U5CON2bits.TXPOL = 0;
+[e = . . _U5CON2bits 0 1 -> -> 0 `i `uc ]
+"107
+[; ;init.c: 107:     U5CON1bits.ON = 1;
+[e = . . _U5CON1bits 0 6 -> -> 1 `i `uc ]
+"108
+[; ;init.c: 108: }
 [e :UE 2365 ]
 }
-"98
-[; ;init.c: 98: void INIT_PWM(){
+"111
+[; ;init.c: 111: void INIT_PWM(){
 [v _INIT_PWM `(v ~T0 @X0 1 ef ]
 {
 [e :U _INIT_PWM ]
 [f ]
-"100
-[; ;init.c: 100:     PWM1ERS = 0b11111;
-[e = _PWM1ERS -> -> 31 `i `uc ]
-"103
-[; ;init.c: 103:     PWM1CLK = 0b00010;
-[e = _PWM1CLK -> -> 2 `i `uc ]
-"106
-[; ;init.c: 106:     PWM1PR = 1665;
-[e = _PWM1PR -> -> 1665 `i `us ]
-"109
-[; ;init.c: 109:     PWM1S1P1 = 1666;
-[e = _PWM1S1P1 -> -> 1666 `i `us ]
-"110
-[; ;init.c: 110:     PWM1S1P2 = 1666;
-[e = _PWM1S1P2 -> -> 1666 `i `us ]
 "113
-[; ;init.c: 113:     PWM1S1CFGbits.MODE = 0b000;
-[e = . . _PWM1S1CFGbits 0 0 -> -> 0 `i `uc ]
+[; ;init.c: 113:     PWM1ERS = 0b11111;
+[e = _PWM1ERS -> -> 31 `i `uc ]
 "116
-[; ;init.c: 116: }
+[; ;init.c: 116:     PWM1CLK = 0b00010;
+[e = _PWM1CLK -> -> 2 `i `uc ]
+"119
+[; ;init.c: 119:     PWM1PR = 1665;
+[e = _PWM1PR -> -> 1665 `i `us ]
+"122
+[; ;init.c: 122:     PWM1S1P1 = 1666;
+[e = _PWM1S1P1 -> -> 1666 `i `us ]
+"123
+[; ;init.c: 123:     PWM1S1P2 = 1666;
+[e = _PWM1S1P2 -> -> 1666 `i `us ]
+"126
+[; ;init.c: 126:     PWM1S1CFGbits.MODE = 0b000;
+[e = . . _PWM1S1CFGbits 0 0 -> -> 0 `i `uc ]
+"129
+[; ;init.c: 129: }
 [e :UE 2366 ]
 }
-"119
-[; ;init.c: 119: void INIT_CLC1(){
+"132
+[; ;init.c: 132: void INIT_CLC1(){
 [v _INIT_CLC1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _INIT_CLC1 ]
 [f ]
-"121
-[; ;init.c: 121:     CLCSELECT = 0;
+"134
+[; ;init.c: 134:     CLCSELECT = 0;
 [e = _CLCSELECT -> -> 0 `i `uc ]
-"124
-[; ;init.c: 124:     CLCnCONbits.MODE = 0b001;
-[e = . . _CLCnCONbits 0 0 -> -> 1 `i `uc ]
-"127
-[; ;init.c: 127:     CLCnPOLbits.POL = 0;
-[e = . . _CLCnPOLbits 0 5 -> -> 0 `i `uc ]
-"130
-[; ;init.c: 130:     CLCnSEL0 = 0b01000010;
-[e = _CLCnSEL0 -> -> 66 `i `uc ]
-"133
-[; ;init.c: 133:     CLCnSEL1 = 0b01111111;
-[e = _CLCnSEL1 -> -> 127 `i `uc ]
 "137
-[; ;init.c: 137:     CLCnGLS0 = 0b00000010;
-[e = _CLCnGLS0 -> -> 2 `i `uc ]
-"138
-[; ;init.c: 138:     CLCnGLS1 = 0b00000000;
-[e = _CLCnGLS1 -> -> 0 `i `uc ]
+[; ;init.c: 137:     CLCnCONbits.MODE = 0b001;
+[e = . . _CLCnCONbits 0 0 -> -> 1 `i `uc ]
 "140
-[; ;init.c: 140:     CLCnGLS2 = 0b00001000;
-[e = _CLCnGLS2 -> -> 8 `i `uc ]
-"141
-[; ;init.c: 141:     CLCnGLS3 = 0b00000000;
-[e = _CLCnGLS3 -> -> 0 `i `uc ]
+[; ;init.c: 140:     CLCnPOLbits.POL = 0;
+[e = . . _CLCnPOLbits 0 5 -> -> 0 `i `uc ]
+"143
+[; ;init.c: 143:     CLCnSEL0 = 0b01000010;
+[e = _CLCnSEL0 -> -> 66 `i `uc ]
 "146
-[; ;init.c: 146:     CLCnCONbits.EN = 1;
+[; ;init.c: 146:     CLCnSEL1 = 0b01111111;
+[e = _CLCnSEL1 -> -> 127 `i `uc ]
+"150
+[; ;init.c: 150:     CLCnGLS0 = 0b00000010;
+[e = _CLCnGLS0 -> -> 2 `i `uc ]
+"151
+[; ;init.c: 151:     CLCnGLS1 = 0b00000000;
+[e = _CLCnGLS1 -> -> 0 `i `uc ]
+"153
+[; ;init.c: 153:     CLCnGLS2 = 0b00001000;
+[e = _CLCnGLS2 -> -> 8 `i `uc ]
+"154
+[; ;init.c: 154:     CLCnGLS3 = 0b00000000;
+[e = _CLCnGLS3 -> -> 0 `i `uc ]
+"159
+[; ;init.c: 159:     CLCnCONbits.EN = 1;
 [e = . . _CLCnCONbits 0 5 -> -> 1 `i `uc ]
-"147
-[; ;init.c: 147: }
+"160
+[; ;init.c: 160: }
 [e :UE 2367 ]
 }

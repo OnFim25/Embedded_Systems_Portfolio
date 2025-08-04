@@ -23,6 +23,8 @@ extern "C" {
     void INIT_INTERRUPTS(void);
     
     void INIT_CLC1(void);
+    void INIT_UART5(void);
+    void INIT_PWM(void);
 
 
 

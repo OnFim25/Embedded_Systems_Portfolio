@@ -28164,6 +28164,10 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
 # 16 "./main.h" 2
+
+
+# 1 "./defines.h" 1
+# 19 "./main.h" 2
 # 1 "./init.h" 1
 # 15 "./init.h"
 # 1 "./main.h" 1
@@ -28178,21 +28182,41 @@ unsigned char __t3rd16on(void);
     void INIT_INTERRUPTS(void);
 
     void INIT_CLC1(void);
-# 17 "./main.h" 2
+    void INIT_UART5(void);
+    void INIT_PWM(void);
+# 20 "./main.h" 2
 # 1 "./Functions.h" 1
 # 15 "./Functions.h"
 # 1 "./main.h" 1
 # 16 "./Functions.h" 2
 
+void delay_msec(unsigned);
+
 void UART_SendByte(char);
 void UART_SendString(char*, unsigned);
-# 18 "./main.h" 2
+# 21 "./main.h" 2
+# 1 "./ISR.h" 1
+# 14 "./ISR.h"
+# 1 "./main.h" 1
+# 15 "./ISR.h" 2
+ void __attribute__((picinterrupt(("")))) ISR(void);
+    extern volatile unsigned long ticks;
+    extern volatile unsigned long delayCount;
+# 22 "./main.h" 2
 # 2 "Functions.c" 2
+
+void delay_msec(unsigned ms){
+    delayCount = (unsigned long)ms;
+    while(delayCount);
+}
 
 
 void UART_SendByte(char byte){
 
     while(!U5ERRIRbits.TXMTIF);
+
+
+    TRISCbits.TRISC0 = 0;
 
 
     PWM1CONbits.LD = 1;
@@ -28203,6 +28227,12 @@ void UART_SendByte(char byte){
 
 
     while(!U5ERRIRbits.TXMTIF);
+
+
+    TRISCbits.TRISC0 = 1;
+
+
+    PWM1CONbits.EN = 0;
 
 }
 

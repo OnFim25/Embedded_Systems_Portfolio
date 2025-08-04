@@ -12,6 +12,7 @@
 extern "C" {
 #endif
 
+    //Oscillator frequency = 64MHz
 #define _XTAL_FREQ 64E6
 
 

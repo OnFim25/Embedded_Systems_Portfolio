@@ -14,6 +14,8 @@ extern "C" {
 
 #include "main.h"
 
+void delay_msec(unsigned);
+    
 void UART_SendByte(char);
 void UART_SendString(char*, unsigned);
 

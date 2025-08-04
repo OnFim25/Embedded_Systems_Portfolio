@@ -13,8 +13,12 @@ extern "C" {
 #endif
 
 #include <xc.h>
+    
+    
+#include "defines.h"
 #include "init.h"
 #include "Functions.h"
+#include "ISR.h"
 
 
 #ifdef	__cplusplus

@@ -1,5 +1,14 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
+"17 ./init.h
+[; ;./init.h: 17:     void INIT_SYSTEM(void);
+[v _INIT_SYSTEM `(v ~T0 @X0 0 ef ]
+"20 ./Functions.h
+[; ;./Functions.h: 20: void UART_SendString(char*, unsigned);
+[v _UART_SendString `(v ~T0 @X0 0 ef2`*uc`ui ]
+"17
+[; ;./Functions.h: 17: void delay_msec(unsigned);
+[v _delay_msec `(v ~T0 @X0 0 ef1`ui ]
 "13 main.c
 [p x FEXTOSC  =  HS      ]
 "14
@@ -2539,17 +2548,56 @@ Version 4.0 HI-TECH Software Intermediate Code
 "49067
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 49067: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-[v $root$_main `(v ~T0 @X0 0 e ]
 "67 main.c
-[; ;main.c: 67: void main(void) {
+[; ;main.c: 67: char dataString[] = "Hello world\0";
+[v _dataString `uc ~T0 @X0 -> 13 `i e ]
+[i _dataString
+:U ..
+-> 72 `c
+-> 101 `c
+-> 108 `c
+-> 108 `c
+-> 111 `c
+-> 32 `c
+-> 119 `c
+-> 111 `c
+-> 114 `c
+-> 108 `c
+-> 100 `c
+-> 0 `c
+-> 0 `c
+..
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"79
+[; ;main.c: 79: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"68
-[; ;main.c: 68:     return;
+"82
+[; ;main.c: 82:     INIT_SYSTEM();
+[e ( _INIT_SYSTEM ..  ]
+"83
+[; ;main.c: 83:     while(1){
+[e :U 2359 ]
+{
+"85
+[; ;main.c: 85:         UART_SendString(dataString, 12);
+[e ( _UART_SendString (2 , &U _dataString -> -> 12 `i `ui ]
+"86
+[; ;main.c: 86:         delay_msec(3000);
+[e ( _delay_msec (1 -> -> 3000 `i `ui ]
+"87
+[; ;main.c: 87:     }
+}
+[e :U 2358 ]
+[e $U 2359  ]
+[e :U 2360 ]
+"88
+[; ;main.c: 88:     return;
 [e $UE 2357  ]
-"69
-[; ;main.c: 69: }
+"89
+[; ;main.c: 89: }
 [e :UE 2357 ]
 }

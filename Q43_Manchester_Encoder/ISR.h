@@ -12,7 +12,9 @@
 extern "C" {
 #endif
 #include "main.h"
-
+    void __interrupt() ISR(void);
+    extern volatile unsigned long ticks;
+    extern volatile unsigned long delayCount;
 
 
 #ifdef	__cplusplus
