@@ -1,2 +1,2 @@
-# PIC_Controllers
-Collection of PIC microcontroller projects using MPLAB X
+# Embedded System codes
+Collection of Embedded system projects and code snipets
