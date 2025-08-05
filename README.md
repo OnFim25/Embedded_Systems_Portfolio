@@ -1,2 +1,2 @@
 # Embedded System codes
-Collection of Embedded system projects and code snipets,,
+Collection of Embedded system projects and code snipets
