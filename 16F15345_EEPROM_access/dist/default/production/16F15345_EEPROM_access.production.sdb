@@ -1,0 +1,137 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F15345 ]
+[d frameptr 6 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"3 E:\Programming\Git codes\Embedded_Systems_Portfolio\16F15345_EEPROM_access\init.c
+[v _INIT_SYSTEM INIT_SYSTEM `(v  1 e 1 0 ]
+"7
+[v _INIT_OSC INIT_OSC `(v  1 e 1 0 ]
+"6 E:\Programming\Git codes\Embedded_Systems_Portfolio\16F15345_EEPROM_access\ISR.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+"53 E:\Programming\Git codes\Embedded_Systems_Portfolio\16F15345_EEPROM_access\main.c
+[v _main main `(v  1 e 1 0 ]
+[s S188 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"368 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC16F1xxxx_DFP/1.26.410/xc8\pic\include\proc/pic16f15345.h
+[u S193 . 1 `S188 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES193  1 e 1 @11 ]
+"6685
+[v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
+[s S148 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T016BIT 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+"6959
+[s S154 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S159 . 1 `S148 1 . 1 0 `S154 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES159  1 e 1 @1438 ]
+[s S102 . 1 `uc 1 T0CKPS 1 0 :4:0 
+`uc 1 T0ASYNC 1 0 :1:4 
+`uc 1 T0CS 1 0 :3:5 
+]
+"7035
+[s S106 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+`uc 1 T0CKPS1 1 0 :1:1 
+`uc 1 T0CKPS2 1 0 :1:2 
+`uc 1 T0CKPS3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS0 1 0 :1:5 
+`uc 1 T0CS1 1 0 :1:6 
+`uc 1 T0CS2 1 0 :1:7 
+]
+[s S115 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+`uc 1 T0PS3 1 0 :1:3 
+]
+[s S120 . 1 `uc 1 T0PS 1 0 :4:0 
+]
+[u S122 . 1 `S102 1 . 1 0 `S106 1 . 1 0 `S115 1 . 1 0 `S120 1 . 1 0 ]
+[v _T0CON1bits T0CON1bits `VES122  1 e 1 @1439 ]
+[s S175 . 1 `uc 1 INTE 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"8160
+[u S180 . 1 `S175 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES180  1 e 1 @1814 ]
+[s S35 . 1 `uc 1 NDIV 1 0 :4:0 
+`uc 1 NOSC 1 0 :3:4 
+]
+"9752
+[s S38 . 1 `uc 1 NDIV0 1 0 :1:0 
+`uc 1 NDIV1 1 0 :1:1 
+`uc 1 NDIV2 1 0 :1:2 
+`uc 1 NDIV3 1 0 :1:3 
+`uc 1 NOSC0 1 0 :1:4 
+`uc 1 NOSC1 1 0 :1:5 
+`uc 1 NOSC2 1 0 :1:6 
+]
+[u S46 . 1 `S35 1 . 1 0 `S38 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES46  1 e 1 @2189 ]
+[s S81 . 1 `uc 1 PLLR 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADOR 1 0 :1:2 
+`uc 1 SOR 1 0 :1:3 
+`uc 1 LFOR 1 0 :1:4 
+`uc 1 MFOR 1 0 :1:5 
+`uc 1 HFOR 1 0 :1:6 
+`uc 1 EXTOR 1 0 :1:7 
+]
+"9929
+[u S90 . 1 `S81 1 . 1 0 ]
+[v _OSCSTATbits OSCSTATbits `VES90  1 e 1 @2192 ]
+[s S62 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 ADOEN 1 0 :1:2 
+`uc 1 SOSCEN 1 0 :1:3 
+`uc 1 LFOEN 1 0 :1:4 
+`uc 1 MFOEN 1 0 :1:5 
+`uc 1 HFOEN 1 0 :1:6 
+`uc 1 EXTOEN 1 0 :1:7 
+]
+"9985
+[u S70 . 1 `S62 1 . 1 0 ]
+[v _OSCENbits OSCENbits `VES70  1 e 1 @2193 ]
+"10078
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"23468
+[v _TMR0IF TMR0IF `VEb  1 e 0 @14437 ]
+"3 E:\Programming\Git codes\Embedded_Systems_Portfolio\16F15345_EEPROM_access\ISR.c
+[v _msCount msCount `VEul  1 e 4 0 ]
+"4
+[v _delayCount delayCount `VEul  1 e 4 0 ]
+"53 E:\Programming\Git codes\Embedded_Systems_Portfolio\16F15345_EEPROM_access\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"62
+} 0
+"3 E:\Programming\Git codes\Embedded_Systems_Portfolio\16F15345_EEPROM_access\init.c
+[v _INIT_SYSTEM INIT_SYSTEM `(v  1 e 1 0 ]
+{
+"5
+} 0
+"7
+[v _INIT_OSC INIT_OSC `(v  1 e 1 0 ]
+{
+"24
+} 0
+"6 E:\Programming\Git codes\Embedded_Systems_Portfolio\16F15345_EEPROM_access\ISR.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"12
+} 0
