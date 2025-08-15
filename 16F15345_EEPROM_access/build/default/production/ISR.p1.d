@@ -4,4 +4,5 @@ main.h  \
 defines.h  \
 init.h  \
 ISR.h  \
-Functions.h 
+Functions.h  \
+EEPROM.h 

@@ -20,6 +20,7 @@ extern "C" {
 #include "init.h"
 #include "ISR.h"
 #include "Functions.h"
+#include "EEPROM.h"
 
 #ifdef	__cplusplus
 }

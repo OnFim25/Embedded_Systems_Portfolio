@@ -1,5 +1,5 @@
-build/default/production/Functions.p1:  \
-Functions.c  \
+build/default/production/EEPROM.p1:  \
+EEPROM.c  \
 main.h  \
 defines.h  \
 init.h  \

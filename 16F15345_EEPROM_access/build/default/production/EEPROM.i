@@ -1,4 +1,4 @@
-# 1 "ISR.c"
+# 1 "EEPROM.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "ISR.c" 2
+# 1 "EEPROM.c" 2
 # 1 "./main.h" 1
 # 17 "./main.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -11556,15 +11556,5 @@ extern __bank0 __bit __timeout;
 # 1 "./main.h" 1
 # 16 "./EEPROM.h" 2
 # 24 "./main.h" 2
-# 2 "ISR.c" 2
+# 2 "EEPROM.c" 2
 
-volatile unsigned long msCount = 0;
-volatile unsigned long delayCount = 0;
-
-void __attribute__((picinterrupt((""))))ISR(){
-    if(TMR0IF){
-        TMR0IF = 0;
-        msCount++;
-        if(delayCount) delayCount--;
-    }
-}
