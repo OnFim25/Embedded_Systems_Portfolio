@@ -7,10 +7,10 @@ Linker command line:
   -pivt0x8=08h -cn \
   -h+dist/default/production\Q43_Manchester_Decoder.production.sym \
   --cmf=dist/default/production\Q43_Manchester_Decoder.production.cmf -z \
-  -Q18F27Q43 -oC:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_3.o \
+  -Q18F27Q43 -oC:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/Q43_Manchester_Decoder.production.map \
-  --md=C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh \
   -ASMALLCONST=02600h-026FFhx218,012600h-0126FFhx218 \
   -AMEDIUMCONST=02600h-0FFFFh,012600h-01FFFFh -ACOMRAM=0501h-055Fh \
@@ -36,7 +36,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o \
+  C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o \
   dist/default/production\Q43_Manchester_Decoder.production.o 
 
 Object code version is 3.11
@@ -46,7 +46,7 @@ Machine type is 18F27Q43
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
                 config                           300000   300000        A        0       4
                 init                                 1A       1A        4        4       0
                 reset_vec                             0        0        4        0       0
@@ -55,15 +55,15 @@ dist/default/production\Q43_Manchester_Decoder.production.o
                 smallconst                         2600     2600        2     1300       0
                 ivt0x8                                8        8       12        4       0
                 text12                             2602     2602       56     1301       0
-                text11                             27DA     27DA       16     1301       0
+                text11                             27AA     27AA       1E     1301       0
                 text10                             2744     2744       24     1301       0
                 text9                              271E     271E       26     1301       0
                 text8                              2658     2658       2C     1301       0
-                text7                              27F0     27F0        A     1301       0
-                text6                              27C4     27C4       16     1301       0
+                text7                              27F8     27F8        A     1301       0
+                text6                              27E2     27E2       16     1301       0
                 text5                              26F8     26F8       26     1301       0
                 text4                              2768     2768       22     1301       0
-                text3                              27AA     27AA       1A     1301       0
+                text3                              27C8     27C8       1A     1301       0
                 text2                              26D2     26D2       26     1301       0
                 text1                              2684     2684       28     1301       0
                 text0                              26AC     26AC       26     1301       0
@@ -77,15 +77,15 @@ TOTAL           Name                               Link     Load   Length     Sp
                 reset_vec                             0        0        4         0
                 ivt0x8                                8        8       12         0
                 text12                             2602     2602       56         0
-                text11                             27DA     27DA       16         0
+                text11                             27AA     27AA       1E         0
                 text10                             2744     2744       24         0
                 text9                              271E     271E       26         0
                 text8                              2658     2658       2C         0
-                text7                              27F0     27F0        A         0
-                text6                              27C4     27C4       16         0
+                text7                              27F8     27F8        A         0
+                text6                              27E2     27E2       16         0
                 text5                              26F8     26F8       26         0
                 text4                              2768     2768       22         0
-                text3                              27AA     27AA       1A         0
+                text3                              27C8     27C8       1A         0
                 text2                              26D2     26D2       26         0
                 text1                              2684     2684       28         0
                 text0                              26AC     26AC       26         0
@@ -197,7 +197,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 ivt0x8                         000008  000016  00001E         4       0  CODE    
                 bssCOMRAM                      000501  00000D  00050E       501       1  COMRAM  
                 smallconst                     002600  000002  002602      1300       0  SMALLCON
-                text12                         002602  0001F8  0027FA      1301       0  CODE    
+                text12                         002602  000200  002802      1301       0  CODE    
 
 
 UNUSED ADDRESS RANGES
@@ -240,20 +240,20 @@ UNUSED ADDRESS RANGES
                          002500-0025FF              100
         CODE             000004-000007                4
                          00001E-0025FF             25E2
-                         0027FA-01FFFF            1D806
+                         002802-01FFFF            1D7FE
         COMRAM           00050E-00055F               52
         CONFIG           30000A-300011                8
         CONST            000004-000007                4
                          00001E-0025FF             25E2
-                         0027FA-01FFFF            1D806
+                         002802-01FFFF            1D7FE
         EEDATA           380000-3803FF              400
         IDLOC            200000-20003F               40
-        MEDIUMCONST      0027FA-00FFFF             D806
+        MEDIUMCONST      002802-00FFFF             D7FE
                          012600-01FFFF             DA00
         RAM              000560-0024FF              100
         SFR              000000-0004FF              100
                          002500-0025FF              100
-        SMALLCONST       0027FA-00FFFF              100
+        SMALLCONST       002802-00FFFF              100
                          012600-01FFFF              100
 
                                   Symbol Table
@@ -274,16 +274,16 @@ _CLCnPOLbits             (abs)        0000D7
 _CLCnSEL0                (abs)        0000D8
 _CLCnSEL1                (abs)        0000D9
 _CLCnSEL2                (abs)        0000DA
-_CONFIGURE_PINS          text11       0027DA
+_CONFIGURE_PINS          text11       0027AA
 _INIT_CLC1               text10       002744
 _INIT_CLC2               text9        00271E
 _INIT_CLC3               text8        002658
-_INIT_INTERRUPTS         text7        0027F0
-_INIT_NCO1               text6        0027C4
+_INIT_INTERRUPTS         text7        0027F8
+_INIT_NCO1               text6        0027E2
 _INIT_OSC                text5        0026F8
 _INIT_SYSTEM             text2        0026D2
 _INIT_TIMER0             text4        002768
-_INIT_UART5              text3        0027AA
+_INIT_UART5              text3        0027C8
 _INTCON0bits             (abs)        0004D6
 _ISR                     text12       002602
 _NCO1CLKbits             (abs)        000447
@@ -294,6 +294,7 @@ _OSCFRQ                  (abs)        0000B1
 _OSCSTATbits             (abs)        0000B2
 _OSCTUNE                 (abs)        0000B0
 _PIE13bits               (abs)        0004AB
+_RC7PPS                  (abs)        000218
 _T0CON0bits              (abs)        00031A
 _T0CON1bits              (abs)        00031B
 _TMR0H                   (abs)        000319
@@ -384,7 +385,7 @@ __Hreset_vec             reset_vec    000004
 __Hrparam                rparam       000000
 __Hsfr                   sfr          000000
 __Hsmallconst            smallconst   002602
-__Hspace_0               (abs)        0027FA
+__Hspace_0               (abs)        002802
 __Hspace_1               (abs)        00050E
 __Hspace_2               (abs)        000000
 __Hspace_4               (abs)        60000A
@@ -501,7 +502,7 @@ __Ltext6                 text6        000000
 __Ltext7                 text7        000000
 __Ltext8                 text8        000000
 __Ltext9                 text9        000000
-__S0                     (abs)        0027FA
+__S0                     (abs)        002802
 __S1                     (abs)        00050E
 __S4                     (abs)        000000
 __S5                     (abs)        000000
@@ -520,16 +521,16 @@ ___stack_hi              stack        000000
 ___stack_lo              stack        000000
 __accesstop              (abs)        000560
 __activetblptr           (abs)        000000
-__end_of_CONFIGURE_PINS  text11       0027F0
+__end_of_CONFIGURE_PINS  text11       0027C8
 __end_of_INIT_CLC1       text10       002768
 __end_of_INIT_CLC2       text9        002744
 __end_of_INIT_CLC3       text8        002684
-__end_of_INIT_INTERRUPTS text7        0027FA
-__end_of_INIT_NCO1       text6        0027DA
+__end_of_INIT_INTERRUPTS text7        002802
+__end_of_INIT_NCO1       text6        0027F8
 __end_of_INIT_OSC        text5        00271E
 __end_of_INIT_SYSTEM     text2        0026F8
 __end_of_INIT_TIMER0     text4        00278A
-__end_of_INIT_UART5      text3        0027C4
+__end_of_INIT_UART5      text3        0027E2
 __end_of_ISR             text12       002658
 __end_of__initialization cinit        0027A4
 __end_of_delay_msec      text1        0026AC
@@ -544,14 +545,14 @@ __psmallconst            smallconst   002600
 __ptext0                 text0        0026AC
 __ptext1                 text1        002684
 __ptext10                text10       002744
-__ptext11                text11       0027DA
+__ptext11                text11       0027AA
 __ptext12                text12       002602
 __ptext2                 text2        0026D2
-__ptext3                 text3        0027AA
+__ptext3                 text3        0027C8
 __ptext4                 text4        002768
 __ptext5                 text5        0026F8
-__ptext6                 text6        0027C4
-__ptext7                 text7        0027F0
+__ptext6                 text6        0027E2
+__ptext7                 text7        0027F8
 __ptext8                 text8        002658
 __ptext9                 text9        00271E
 __ramtop                 ramtop       002600
@@ -596,17 +597,17 @@ FUNCTIONS.c estimated size: 40
 
 init.c
 		_INIT_SYSTEM   		CODE           	26D2	0000	38
-		_INIT_NCO1     		CODE           	27C4	0000	22
-		_INIT_UART5    		CODE           	27AA	0000	26
+		_INIT_NCO1     		CODE           	27E2	0000	22
+		_INIT_UART5    		CODE           	27C8	0000	26
 		_INIT_TIMER0   		CODE           	2768	0000	34
-		_INIT_INTERRUPTS		CODE           	27F0	0000	10
+		_INIT_INTERRUPTS		CODE           	27F8	0000	10
 		_INIT_OSC      		CODE           	26F8	0000	38
-		_CONFIGURE_PINS		CODE           	27DA	0000	22
+		_CONFIGURE_PINS		CODE           	27AA	0000	30
 		_INIT_CLC1     		CODE           	2744	0000	36
 		_INIT_CLC2     		CODE           	271E	0000	38
 		_INIT_CLC3     		CODE           	2658	0000	44
 
-init.c estimated size: 308
+init.c estimated size: 316
 
 main.c
 		_main          		CODE           	26AC	0000	38

@@ -28271,10 +28271,14 @@ void INIT_TIMER0(){
 void CONFIGURE_PINS(){
 
     ANSELCbits.ANSELC3 = 0; TRISCbits.TRISC3 = 1;
+    ANSELCbits.ANSELC7 = 0; TRISCbits.TRISC7 = 0;
     ANSELAbits.ANSELA5 = 0; TRISAbits.TRISA5 = 1;
 
 
     CLCIN0PPS = 0b010011;
+
+
+    RC7PPS = 0x01;
 
 
     U5RXPPS = 0b000101;

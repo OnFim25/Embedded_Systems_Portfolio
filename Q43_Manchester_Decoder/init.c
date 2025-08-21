@@ -72,10 +72,14 @@ void INIT_TIMER0(){
 void CONFIGURE_PINS(){
     //Configure pins
     ANSELCbits.ANSELC3 = 0; TRISCbits.TRISC3 = 1;   //CLCIN0PPS
+    ANSELCbits.ANSELC7 = 0; TRISCbits.TRISC7 = 0;   //CLC1 output (Decoded signal output)
     ANSELAbits.ANSELA5 = 0; TRISAbits.TRISA5 = 1;   //UART5RX
     
     //RC3 is selected as CLCIN0PPS
     CLCIN0PPS = 0b010011;
+    
+    //CLC1 Output (Decoded data signal)
+    RC7PPS = 0x01;
     
     //RA5 is selected as UART5RX pin
     U5RXPPS = 0b000101;

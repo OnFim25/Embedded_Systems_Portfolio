@@ -17,21 +17,21 @@ cinit CODE 0 278A 278A 20 1 2
 text0 CODE 0 26AC 26AC 26 1 2
 text1 CODE 0 2684 2684 28 1 2
 text2 CODE 0 26D2 26D2 26 1 2
-text3 CODE 0 27AA 27AA 1A 1 2
+text3 CODE 0 27C8 27C8 1A 1 2
 text4 CODE 0 2768 2768 22 1 2
 text5 CODE 0 26F8 26F8 26 1 2
-text6 CODE 0 27C4 27C4 16 1 2
-text7 CODE 0 27F0 27F0 A 1 2
+text6 CODE 0 27E2 27E2 16 1 2
+text7 CODE 0 27F8 27F8 A 1 2
 text8 CODE 0 2658 2658 2C 1 2
 text9 CODE 0 271E 271E 26 1 2
 text10 CODE 0 2744 2744 24 1 2
-text11 CODE 0 27DA 27DA 16 1 2
+text11 CODE 0 27AA 27AA 1E 1 2
 text12 CODE 0 2602 2602 56 1 2
 cstackCOMRAM COMRAM 1 50A 50A 4 1 1
 smallconst SMALLCONST 0 2600 2600 2 1 2
 bssCOMRAM COMRAM 1 501 501 9 1 1
 config CONFIG 4 300000 300000 A 1 1
-$C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+$C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 init CODE 0 1A 1A 4 1 2
 reset_vec CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 A 1 1
@@ -51,13 +51,13 @@ BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
 CONST 1E-25FF 1
-CONST 27FA-1FFFF 1
+CONST 2802-1FFFF 1
 IDLOC 200000-20003F 1
-SMALLCONST 27FA-FFFF 1
+SMALLCONST 2802-FFFF 1
 SMALLCONST 12600-1FFFF 1
 CODE 4-7 1
 CODE 1E-25FF 1
-CODE 27FA-1FFFF 1
+CODE 2802-1FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
@@ -91,7 +91,7 @@ BIGSFR 2500-25FF 1
 COMRAM 50E-55F 1
 CONFIG 30000A-300011 1
 EEDATA 380000-3803FF 1
-MEDIUMCONST 27FA-FFFF 1
+MEDIUMCONST 2802-FFFF 1
 MEDIUMCONST 12600-1FFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -116,62 +116,64 @@ $dist/default/production\Q43_Manchester_Decoder.production.o
 2650 text12 CODE >18:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\ISR.c
 2652 text12 CODE >21:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\ISR.c
 2656 text12 CODE >23:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\ISR.c
-27DA text11 CODE >72:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27DA text11 CODE >74:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27E0 text11 CODE >75:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27E4 text11 CODE >78:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27EA text11 CODE >81:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27EE text11 CODE >82:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2744 text10 CODE >103:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2744 text10 CODE >105:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2748 text10 CODE >108:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2750 text10 CODE >111:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2752 text10 CODE >114:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2754 text10 CODE >117:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2758 text10 CODE >121:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-275C text10 CODE >122:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2760 text10 CODE >124:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2762 text10 CODE >125:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2764 text10 CODE >130:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2766 text10 CODE >131:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-271E text9 CODE >138:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-271E text9 CODE >140:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2724 text9 CODE >143:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-272C text9 CODE >146:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-272E text9 CODE >149:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2730 text9 CODE >152:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2734 text9 CODE >155:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2738 text9 CODE >156:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-273A text9 CODE >158:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-273E text9 CODE >159:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2740 text9 CODE >162:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2742 text9 CODE >163:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2658 text8 CODE >170:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2658 text8 CODE >172:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-265E text8 CODE >175:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2662 text8 CODE >178:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2664 text8 CODE >181:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2668 text8 CODE >184:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-266C text8 CODE >187:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2670 text8 CODE >191:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2674 text8 CODE >192:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2678 text8 CODE >194:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-267C text8 CODE >195:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2680 text8 CODE >199:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-2682 text8 CODE >200:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27F0 text7 CODE >84:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27F0 text7 CODE >88:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27F2 text7 CODE >89:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27F4 text7 CODE >92:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27F6 text7 CODE >95:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27F8 text7 CODE >96:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27C4 text6 CODE >202:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27C4 text6 CODE >205:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27C8 text6 CODE >208:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27CA text6 CODE >211:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27CE text6 CODE >215:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27D6 text6 CODE >218:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27D8 text6 CODE >219:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27AA text11 CODE >72:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27AA text11 CODE >74:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27B0 text11 CODE >75:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27B4 text11 CODE >76:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27B8 text11 CODE >79:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27BE text11 CODE >82:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27C2 text11 CODE >85:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27C6 text11 CODE >86:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2744 text10 CODE >107:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2744 text10 CODE >109:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2748 text10 CODE >112:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2750 text10 CODE >115:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2752 text10 CODE >118:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2754 text10 CODE >121:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2758 text10 CODE >125:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+275C text10 CODE >126:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2760 text10 CODE >128:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2762 text10 CODE >129:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2764 text10 CODE >134:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2766 text10 CODE >135:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+271E text9 CODE >142:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+271E text9 CODE >144:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2724 text9 CODE >147:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+272C text9 CODE >150:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+272E text9 CODE >153:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2730 text9 CODE >156:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2734 text9 CODE >159:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2738 text9 CODE >160:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+273A text9 CODE >162:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+273E text9 CODE >163:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2740 text9 CODE >166:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2742 text9 CODE >167:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2658 text8 CODE >174:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2658 text8 CODE >176:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+265E text8 CODE >179:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2662 text8 CODE >182:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2664 text8 CODE >185:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2668 text8 CODE >188:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+266C text8 CODE >191:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2670 text8 CODE >195:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2674 text8 CODE >196:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2678 text8 CODE >198:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+267C text8 CODE >199:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2680 text8 CODE >203:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2682 text8 CODE >204:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27F8 text7 CODE >88:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27F8 text7 CODE >92:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27FA text7 CODE >93:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27FC text7 CODE >96:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27FE text7 CODE >99:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+2800 text7 CODE >100:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27E2 text6 CODE >206:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27E2 text6 CODE >209:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27E6 text6 CODE >212:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27E8 text6 CODE >215:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27EC text6 CODE >219:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27F4 text6 CODE >222:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27F6 text6 CODE >223:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
 26F8 text5 CODE >26:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
 26F8 text5 CODE >28:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
 2702 text5 CODE >31:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
@@ -187,15 +189,15 @@ $dist/default/production\Q43_Manchester_Decoder.production.o
 2782 text4 CODE >65:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
 2786 text4 CODE >68:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
 2788 text4 CODE >70:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27AA text3 CODE >221:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27AA text3 CODE >223:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27B4 text3 CODE >226:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27B6 text3 CODE >229:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27B8 text3 CODE >232:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27BC text3 CODE >235:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27BE text3 CODE >238:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27C0 text3 CODE >241:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
-27C2 text3 CODE >242:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27C8 text3 CODE >225:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27C8 text3 CODE >227:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27D2 text3 CODE >230:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27D4 text3 CODE >233:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27D6 text3 CODE >236:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27DA text3 CODE >239:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27DC text3 CODE >242:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27DE text3 CODE >245:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
+27E0 text3 CODE >246:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
 26D2 text2 CODE >5:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
 26D2 text2 CODE >7:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
 26D6 text2 CODE >9:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\init.c
@@ -218,25 +220,25 @@ $dist/default/production\Q43_Manchester_Decoder.production.o
 26B2 text0 CODE >82:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\main.c
 26B4 text0 CODE >83:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\main.c
 26B6 text0 CODE >86:E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\main.c
-278A cinit CODE >6846:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-278A cinit CODE >6848:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-278A cinit CODE >6851:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-278A cinit CODE >6869:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-278E cinit CODE >6870:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-2790 cinit CODE >6871:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-2790 cinit CODE >6872:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-2792 cinit CODE >6873:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-2794 cinit CODE >6874:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-2796 cinit CODE >6882:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-2798 cinit CODE >6883:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-279A cinit CODE >6884:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-279C cinit CODE >6885:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-279E cinit CODE >6886:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-27A0 cinit CODE >6887:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-27A2 cinit CODE >6888:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-27A4 cinit CODE >6894:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-27A4 cinit CODE >6896:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
-27A6 cinit CODE >6897:C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_1.s
+278A cinit CODE >6848:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+278A cinit CODE >6850:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+278A cinit CODE >6853:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+278A cinit CODE >6871:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+278E cinit CODE >6872:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+2790 cinit CODE >6873:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+2790 cinit CODE >6874:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+2792 cinit CODE >6875:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+2794 cinit CODE >6876:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+2796 cinit CODE >6884:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+2798 cinit CODE >6885:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+279A cinit CODE >6886:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+279C cinit CODE >6887:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+279E cinit CODE >6888:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+27A0 cinit CODE >6889:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+27A2 cinit CODE >6890:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+27A4 cinit CODE >6896:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+27A4 cinit CODE >6898:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
+27A6 cinit CODE >6899:C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -250,7 +252,7 @@ $dist/default/production\Q43_Manchester_Decoder.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\Q43_Manchester_Decoder.production.o
-__Hspace_0 27FA 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
+__Hspace_0 2802 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Hspace_1 50E 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
@@ -261,20 +263,20 @@ __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Q43_Manchester_De
 __end_of_delay_msec 26AC 0 CODE 0 text1 dist/default/production\Q43_Manchester_Decoder.production.o
 _OSCENbits B3 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Lsmallconst 2600 0 SMALLCONST 0 smallconst dist/default/production\Q43_Manchester_Decoder.production.o
-___sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+___sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 _main 26AC 0 CODE 0 text0 dist/default/production\Q43_Manchester_Decoder.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-start 1A 0 CODE 0 init C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+___stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+start 1A 0 CODE 0 init C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
 _U5FIFObits 2FC 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\Q43_Manchester_Decoder.production.o
 delay_msec@ms 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
-__accesstop 560 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-intlevel0 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-intlevel1 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-intlevel2 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-intlevel3 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+__accesstop 560 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Q43_Manchester_Decoder.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\Q43_Manchester_Decoder.production.o
@@ -284,8 +286,8 @@ _U5CON0bits 2F7 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.product
 _U5CON1bits 2F8 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 _U5CON2bits 2F9 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/production\Q43_Manchester_Decoder.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 _U5RXPPS 27A 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Q43_Manchester_Decoder.production.o
 _NCO1CLKbits 447 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
@@ -301,10 +303,11 @@ __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\Q43_Manchester_Decoder
 _TRISAbits 4C6 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 _TRISCbits 4C8 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
+_RC7PPS 218 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 _TMR0IE 250F 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 _TMR0IF 258F 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 _U5RXIF 25D8 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+isa$xinst 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 __Hbank5 0 0 ABS 0 bank5 dist/default/production\Q43_Manchester_Decoder.production.o
 __Hbank6 0 0 ABS 0 bank6 dist/default/production\Q43_Manchester_Decoder.production.o
 __Hbank7 0 0 ABS 0 bank7 dist/default/production\Q43_Manchester_Decoder.production.o
@@ -405,7 +408,7 @@ __Ltext 0 0 ABS 0 text dist/default/production\Q43_Manchester_Decoder.production
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
 __Hirdata 0 0 CODE 0 irdata dist/default/production\Q43_Manchester_Decoder.production.o
 _ISR 2602 0 CODE 0 text12 dist/default/production\Q43_Manchester_Decoder.production.o
-__S0 27FA 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
+__S0 2802 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __S1 50E 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __S4 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __S5 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
@@ -427,7 +430,7 @@ __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\Q43_Manchester_Decoder.pro
 __end_of_ISR 2658 0 CODE 0 text12 dist/default/production\Q43_Manchester_Decoder.production.o
 __Hramtop 2600 0 RAM 0 ramtop dist/default/production\Q43_Manchester_Decoder.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\Q43_Manchester_Decoder.production.o
-_INIT_UART5 27AA 0 CODE 0 text3 dist/default/production\Q43_Manchester_Decoder.production.o
+_INIT_UART5 27C8 0 CODE 0 text3 dist/default/production\Q43_Manchester_Decoder.production.o
 __activetblptr 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\Q43_Manchester_Decoder.production.o
 __Htext10 0 0 ABS 0 text10 dist/default/production\Q43_Manchester_Decoder.production.o
@@ -436,9 +439,9 @@ __Htext12 0 0 ABS 0 text12 dist/default/production\Q43_Manchester_Decoder.produc
 __end_of_INIT_CLC1 2768 0 CODE 0 text10 dist/default/production\Q43_Manchester_Decoder.production.o
 __end_of_INIT_CLC2 2744 0 CODE 0 text9 dist/default/production\Q43_Manchester_Decoder.production.o
 __end_of_INIT_CLC3 2684 0 CODE 0 text8 dist/default/production\Q43_Manchester_Decoder.production.o
-__end_of_INIT_NCO1 27DA 0 CODE 0 text6 dist/default/production\Q43_Manchester_Decoder.production.o
+__end_of_INIT_NCO1 27F8 0 CODE 0 text6 dist/default/production\Q43_Manchester_Decoder.production.o
 __ptext10 2744 0 CODE 0 text10 dist/default/production\Q43_Manchester_Decoder.production.o
-__ptext11 27DA 0 CODE 0 text11 dist/default/production\Q43_Manchester_Decoder.production.o
+__ptext11 27AA 0 CODE 0 text11 dist/default/production\Q43_Manchester_Decoder.production.o
 __ptext12 2602 0 CODE 0 text12 dist/default/production\Q43_Manchester_Decoder.production.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/production\Q43_Manchester_Decoder.production.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/production\Q43_Manchester_Decoder.production.o
@@ -472,18 +475,18 @@ __Lbigram 0 0 ABS 0 bigram dist/default/production\Q43_Manchester_Decoder.produc
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/production\Q43_Manchester_Decoder.production.o
 __Lcomram 0 0 ABS 0 comram dist/default/production\Q43_Manchester_Decoder.production.o
 __Lconfig 0 0 CONFIG 4 config dist/default/production\Q43_Manchester_Decoder.production.o
-__end_of_INIT_INTERRUPTS 27FA 0 CODE 0 text7 dist/default/production\Q43_Manchester_Decoder.production.o
+__end_of_INIT_INTERRUPTS 2802 0 CODE 0 text7 dist/default/production\Q43_Manchester_Decoder.production.o
 _INIT_CLC1 2744 0 CODE 0 text10 dist/default/production\Q43_Manchester_Decoder.production.o
 _INIT_CLC2 271E 0 CODE 0 text9 dist/default/production\Q43_Manchester_Decoder.production.o
 _INIT_CLC3 2658 0 CODE 0 text8 dist/default/production\Q43_Manchester_Decoder.production.o
-_INIT_NCO1 27C4 0 CODE 0 text6 dist/default/production\Q43_Manchester_Decoder.production.o
+_INIT_NCO1 27E2 0 CODE 0 text6 dist/default/production\Q43_Manchester_Decoder.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Q43_Manchester_Decoder.production.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Q43_Manchester_Decoder.production.o
-isa$std 1 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-stackhi 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-stacklo 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+isa$std 1 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+stackhi 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 _INIT_OSC 26F8 0 CODE 0 text5 dist/default/production\Q43_Manchester_Decoder.production.o
 _OSCTUNE B0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\Q43_Manchester_Decoder.production.o
@@ -493,13 +496,13 @@ __Lspace_0 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production
 __Lspace_1 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Lspace_2 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 __Lspace_4 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
-__end_of_INIT_UART5 27C4 0 CODE 0 text3 dist/default/production\Q43_Manchester_Decoder.production.o
+__end_of_INIT_UART5 27E2 0 CODE 0 text3 dist/default/production\Q43_Manchester_Decoder.production.o
 __pbssCOMRAM 501 0 COMRAM 1 bssCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
 __end_of_INIT_OSC 271E 0 CODE 0 text5 dist/default/production\Q43_Manchester_Decoder.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
 end_of_initialization 27A4 0 CODE 0 cinit dist/default/production\Q43_Manchester_Decoder.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\Q43_Manchester_Decoder.production.o
-_INIT_INTERRUPTS 27F0 0 CODE 0 text7 dist/default/production\Q43_Manchester_Decoder.production.o
+_INIT_INTERRUPTS 27F8 0 CODE 0 text7 dist/default/production\Q43_Manchester_Decoder.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\Q43_Manchester_Decoder.production.o
 __Lramtop 2600 0 RAM 0 ramtop dist/default/production\Q43_Manchester_Decoder.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\Q43_Manchester_Decoder.production.o
@@ -508,29 +511,29 @@ _OSCCON1bits AD 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.product
 __ptext0 26AC 0 CODE 0 text0 dist/default/production\Q43_Manchester_Decoder.production.o
 __ptext1 2684 0 CODE 0 text1 dist/default/production\Q43_Manchester_Decoder.production.o
 __ptext2 26D2 0 CODE 0 text2 dist/default/production\Q43_Manchester_Decoder.production.o
-__ptext3 27AA 0 CODE 0 text3 dist/default/production\Q43_Manchester_Decoder.production.o
+__ptext3 27C8 0 CODE 0 text3 dist/default/production\Q43_Manchester_Decoder.production.o
 __ptext4 2768 0 CODE 0 text4 dist/default/production\Q43_Manchester_Decoder.production.o
 __ptext5 26F8 0 CODE 0 text5 dist/default/production\Q43_Manchester_Decoder.production.o
-__ptext6 27C4 0 CODE 0 text6 dist/default/production\Q43_Manchester_Decoder.production.o
-__ptext7 27F0 0 CODE 0 text7 dist/default/production\Q43_Manchester_Decoder.production.o
+__ptext6 27E2 0 CODE 0 text6 dist/default/production\Q43_Manchester_Decoder.production.o
+__ptext7 27F8 0 CODE 0 text7 dist/default/production\Q43_Manchester_Decoder.production.o
 __ptext8 2658 0 CODE 0 text8 dist/default/production\Q43_Manchester_Decoder.production.o
 __ptext9 271E 0 CODE 0 text9 dist/default/production\Q43_Manchester_Decoder.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\Q43_Manchester_Decoder.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\Q43_Manchester_Decoder.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\Q43_Manchester_Decoder.production.o
 __Ltext12 0 0 ABS 0 text12 dist/default/production\Q43_Manchester_Decoder.production.o
-_CONFIGURE_PINS 27DA 0 CODE 0 text11 dist/default/production\Q43_Manchester_Decoder.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+_CONFIGURE_PINS 27AA 0 CODE 0 text11 dist/default/production\Q43_Manchester_Decoder.production.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\Q43_Manchester_Decoder.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Q43_Manchester_Decoder.production.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/production\Q43_Manchester_Decoder.production.o
 __psmallconst 2600 0 SMALLCONST 0 smallconst dist/default/production\Q43_Manchester_Decoder.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\Q43_Manchester_Decoder.production.o
-___heap_hi 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 ___param_bank 0 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsed4.\driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\PC\AppData\Local\Temp\xcAsals.\driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\Q43_Manchester_Decoder.production.o
 __end_of__initialization 27A4 0 CODE 0 cinit dist/default/production\Q43_Manchester_Decoder.production.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\Q43_Manchester_Decoder.production.o
@@ -540,7 +543,7 @@ _INIT_TIMER0 2768 0 CODE 0 text4 dist/default/production\Q43_Manchester_Decoder.
 __pcstackCOMRAM 50A 0 COMRAM 1 cstackCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
 _T0CON0bits 31A 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
 _T0CON1bits 31B 0 ABS 0 - dist/default/production\Q43_Manchester_Decoder.production.o
-__end_of_CONFIGURE_PINS 27F0 0 CODE 0 text11 dist/default/production\Q43_Manchester_Decoder.production.o
+__end_of_CONFIGURE_PINS 27C8 0 CODE 0 text11 dist/default/production\Q43_Manchester_Decoder.production.o
 _delayCount 501 0 COMRAM 1 bssCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
 _uartReceivedData 509 0 COMRAM 1 bssCOMRAM dist/default/production\Q43_Manchester_Decoder.production.o
 __end_of_main 26D2 0 CODE 0 text0 dist/default/production\Q43_Manchester_Decoder.production.o
@@ -590,7 +593,7 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\Q43_Manchester
 # All other numeric quantities are in decimal.
 %SEGMENTS
 ivt0x8 0 8 8 16 1
-text12 0 2602 2602 1F8 1
+text12 0 2602 2602 200 1
 reset_vec 0 0 0 4 1
 smallconst 0 2600 2600 2 1
 bssCOMRAM 1 501 501 D 1
