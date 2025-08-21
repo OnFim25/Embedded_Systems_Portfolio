@@ -27,6 +27,9 @@ Manchester encoding is a line coding method where each bit contains a mid-bit tr
 - Each bit guarantees a transition, enabling reliable **clock recovery** and eliminating DC bias.  
 
 In this decoder design:  
+
+![Block Diagram](assets/Manchester_Decoder.PNG)
+
 - A **CLC XOR gate** detects mid-bit transitions.  
 - The **NCO**, triggered by these transitions, generates a precise **¾ bit-time pulse** for sampling.  
 - A **CLC D-flip-flop** latches the incoming bit at the correct instant, producing clean decoded data.  
