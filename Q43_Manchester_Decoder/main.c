@@ -64,9 +64,26 @@
 // Use project enums instead of #define for ON and OFF.
 #include "main.h"
 
+uint8_t uartReceivedData = 0;
+
 void main(void) {
     
+    //Initialize Manchester decoder and other important modules
+    INIT_SYSTEM();
     
-    
+    while(1){
+        
+        /********************************************************************
+         *  Newly Received Manchester encoded signal will be decoded and    * 
+         *  stored in the variable uartReceivedData                         *
+         ********************************************************************/
+        
+        asm("nop");
+        asm("nop");
+        asm("nop");
+        
+        //100 millisecond delay
+        delay_msec(100);
+    }
     return;
 }

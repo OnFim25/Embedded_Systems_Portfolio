@@ -28236,6 +28236,7 @@ unsigned char __t3rd16on(void);
     void INIT_CLC2(void);
     void INIT_CLC3(void);
     void INIT_NCO1(void);
+    void INIT_UART5(void);
 # 18 "./main.h" 2
 # 1 "./ISR.h" 1
 # 15 "./ISR.h"
@@ -28252,11 +28253,31 @@ unsigned char __t3rd16on(void);
 
     void delay_msec(unsigned long);
 # 20 "./main.h" 2
+
+
+    extern uint8_t uartReceivedData;
 # 66 "main.c" 2
+
+uint8_t uartReceivedData = 0;
 
 void main(void) {
 
 
+    INIT_SYSTEM();
 
+    while(1){
+
+
+
+
+
+
+        __asm("nop");
+        __asm("nop");
+        __asm("nop");
+
+
+        delay_msec(100);
+    }
     return;
 }

@@ -4,6 +4,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "58498 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 58498: extern volatile __bit TMR0IF __attribute__((address(0x258F)));
 [v _TMR0IF `Vb ~T0 @X0 0 e@9615 ]
+"60070
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 60070: extern volatile __bit U5RXIF __attribute__((address(0x25D8)));
+[v _U5RXIF `Vb ~T0 @X0 0 e@9688 ]
+"22 ./main.h
+[; ;./main.h: 22:     extern uint8_t uartReceivedData;
+[v _uartReceivedData `uc ~T0 @X0 0 e ]
+"19815 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 19815: extern volatile unsigned char U5RXB __attribute__((address(0x2ED)));
+[v _U5RXB `Vuc ~T0 @X0 0 e@749 ]
 "270 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-Q_DFP/1.27.449/xc8\pic\include\proc/pic18f27q43.h: 270: __asm("CLKRCON equ 039h");
 [; <" CLKRCON equ 039h ;# ">
@@ -2492,32 +2501,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> -> 0 `i `l `ul
 ]
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"7
-[; ;ISR.c: 7: void __attribute__((picinterrupt(("")))) ISR(){
+"8
+[; ;ISR.c: 8: void __attribute__((picinterrupt(("")))) ISR(){
 [v _ISR `(v ~T1 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
-"8
-[; ;ISR.c: 8:     if(TMR0IF){
+"10
+[; ;ISR.c: 10:     if(TMR0IF){
 [e $ ! _TMR0IF 2358  ]
 {
-"9
-[; ;ISR.c: 9:         TMR0IF = 0;
-[e = _TMR0IF -> -> 0 `i `b ]
-"10
-[; ;ISR.c: 10:         ticks++;
-[e ++ _ticks -> -> 1 `i `Vul ]
 "11
-[; ;ISR.c: 11:         if(delayCount) delayCount--;
+[; ;ISR.c: 11:         TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"12
+[; ;ISR.c: 12:         ticks++;
+[e ++ _ticks -> -> 1 `i `Vul ]
+"13
+[; ;ISR.c: 13:         if(delayCount) delayCount--;
 [e $ ! != _delayCount -> -> -> 0 `i `l `ul 2359  ]
 [e -- _delayCount -> -> 1 `i `Vul ]
 [e :U 2359 ]
-"12
-[; ;ISR.c: 12:     }
+"14
+[; ;ISR.c: 14:     }
 }
+[e $U 2360  ]
+"17
+[; ;ISR.c: 17:     else if(U5RXIF){
 [e :U 2358 ]
-"13
-[; ;ISR.c: 13: }
+[e $ ! _U5RXIF 2361  ]
+{
+"18
+[; ;ISR.c: 18:         U5RXIF = 0;
+[e = _U5RXIF -> -> 0 `i `b ]
+"21
+[; ;ISR.c: 21:         uartReceivedData = U5RXB;
+[e = _uartReceivedData _U5RXB ]
+"22
+[; ;ISR.c: 22:     }
+}
+[e :U 2361 ]
+[e :U 2360 ]
+"23
+[; ;ISR.c: 23: }
 [e :UE 2357 ]
 }

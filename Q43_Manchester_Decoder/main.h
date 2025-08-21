@@ -18,6 +18,8 @@ extern "C" {
 #include "ISR.h"
 #include "FUNCTIONS.h"
 
+    
+    extern uint8_t uartReceivedData;
 
 #ifdef	__cplusplus
 }

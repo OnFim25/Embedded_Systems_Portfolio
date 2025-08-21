@@ -28184,6 +28184,7 @@ unsigned char __t3rd16on(void);
     void INIT_CLC2(void);
     void INIT_CLC3(void);
     void INIT_NCO1(void);
+    void INIT_UART5(void);
 # 18 "./main.h" 2
 # 1 "./ISR.h" 1
 # 15 "./ISR.h"
@@ -28200,16 +28201,28 @@ unsigned char __t3rd16on(void);
 
     void delay_msec(unsigned long);
 # 20 "./main.h" 2
+
+
+    extern uint8_t uartReceivedData;
 # 2 "init.c" 2
 
 
 
 void INIT_SYSTEM(){
+
     INIT_OSC();
 
     CONFIGURE_PINS();
 
+
     INIT_TIMER0();
+
+
+    INIT_CLC1();
+    INIT_CLC2();
+    INIT_CLC3();
+    INIT_NCO1();
+    INIT_UART5();
 
 
     INIT_INTERRUPTS();
@@ -28235,7 +28248,7 @@ void INIT_OSC(){
 
     while(!OSCSTATbits.HFOR);
 }
-# 44 "init.c"
+# 53 "init.c"
 void INIT_TIMER0(){
 
 
@@ -28271,15 +28284,14 @@ void INIT_INTERRUPTS(){
 
 
 
-    INTCON0bits.GIE = 0;
-
-
     TMR0IE = 1;
     TMR0IF = 0;
 
 
-    INTCON0bits.GIE = 1;
+    PIE13bits.U5RXIE = 1;
 
+
+    INTCON0bits.GIE = 1;
 }
 
 
@@ -28321,6 +28333,7 @@ void INIT_CLC1(){
 
 
 
+
 void INIT_CLC2(){
 
     CLCSELECT = 1;
@@ -28345,10 +28358,10 @@ void INIT_CLC2(){
     CLCnGLS3 = 0b00000000;
 
 
-
-
     CLCnCONbits.EN = 1;
 }
+
+
 
 
 
@@ -28402,4 +28415,27 @@ void INIT_NCO1(){
 
 
     NCO1CONbits.EN = 1;
+}
+
+void INIT_UART5(){
+
+    U5BRG = 416;
+
+
+    U5CON0bits.BRGS = 0;
+
+
+    U5CON0bits.RXEN = 1;
+
+
+    U5CON0bits.MODE = 0b0000;
+
+
+    U5CON2bits.RXPOL = 0;
+
+
+    U5FIFObits.RXBE = 1;
+
+
+    U5CON1bits.ON = 1;
 }

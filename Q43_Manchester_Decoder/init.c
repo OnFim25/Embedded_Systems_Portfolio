@@ -3,13 +3,22 @@
 
 //All essensial module initialisation
 void INIT_SYSTEM(){
+    //FOSC = HFINTOSC 64MHz
     INIT_OSC();
     
     CONFIGURE_PINS();
     
+    //millisecond timer
     INIT_TIMER0();
     
+    /*Initialize all required modules for Decoder*/
+    INIT_CLC1();
+    INIT_CLC2();
+    INIT_CLC3();
+    INIT_NCO1();
+    INIT_UART5();
     
+    //Initialize interrupts
     INIT_INTERRUPTS();
 }
 
@@ -73,18 +82,17 @@ void CONFIGURE_PINS(){
 }
 
 void INIT_INTERRUPTS(){
-    /*Setting Priorities for the interrupts*/
-    
-    //Disable global interrupts
-    INTCON0bits.GIE = 0;
+
 
     /*Timer0 interrupt*/
     TMR0IE = 1;
     TMR0IF = 0;
     
+    /*UART5 Receiver Interrupt enable*/
+    PIE13bits.U5RXIE = 1;
+    
     /*Enable global interrupts*/
     INTCON0bits.GIE = 1;
-    
 }
 
 
@@ -122,6 +130,7 @@ void INIT_CLC1(){
     CLCnCONbits.EN = 1;
 }
 
+
 /*
  * CLC2 acts as the XOR gate
  * inputs => Manchester encoded input and CLC1 output
@@ -148,12 +157,12 @@ void INIT_CLC2(){
     
     CLCnGLS2 = 0b00001000;  //CLCIN0PPS
     CLCnGLS3 = 0b00000000;
-    
-    
-    
+
     //Enable CLC2
     CLCnCONbits.EN = 1;
 }
+
+
 /*
  * CLC3 acts as AND_OR gate 
  * Inputs => CLC2 output, FOSC and NCO1 output
@@ -207,4 +216,27 @@ void INIT_NCO1(){
     
     //Enable NCO1
     NCO1CONbits.EN = 1;
+}
+
+void INIT_UART5(){
+    //U5BRG = Fosc/[16(BaudRate)]-1; if BRGS = 0
+    U5BRG = 416; //BaudRate = 9600
+    
+    //Baud rate generator works in normal speed
+    U5CON0bits.BRGS = 0;
+    
+    //Receiver is enabled
+    U5CON0bits.RXEN = 1;
+    
+    //Asynchronous 8-bit UART mode
+    U5CON0bits.MODE = 0b0000;
+    
+    //Output data are not inverted, RX input is high in Idle state
+    U5CON2bits.RXPOL = 0;
+    
+    //Clear RX buffer
+    U5FIFObits.RXBE = 1;
+    
+    //Enable UART5 module
+    U5CON1bits.ON = 1;
 }

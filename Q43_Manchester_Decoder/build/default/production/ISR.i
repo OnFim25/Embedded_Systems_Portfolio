@@ -28184,6 +28184,7 @@ unsigned char __t3rd16on(void);
     void INIT_CLC2(void);
     void INIT_CLC3(void);
     void INIT_NCO1(void);
+    void INIT_UART5(void);
 # 18 "./main.h" 2
 # 1 "./ISR.h" 1
 # 15 "./ISR.h"
@@ -28200,16 +28201,29 @@ unsigned char __t3rd16on(void);
 
     void delay_msec(unsigned long);
 # 20 "./main.h" 2
+
+
+    extern uint8_t uartReceivedData;
 # 2 "ISR.c" 2
 
 volatile unsigned long ticks = 0;
 volatile unsigned long delayCount = 0;
 
 
+
 void __attribute__((picinterrupt(("")))) ISR(){
+
     if(TMR0IF){
         TMR0IF = 0;
         ticks++;
         if(delayCount) delayCount--;
+    }
+
+
+    else if(U5RXIF){
+        U5RXIF = 0;
+
+
+        uartReceivedData = U5RXB;
     }
 }

@@ -27,6 +27,7 @@ extern "C" {
     void INIT_CLC2(void);
     void INIT_CLC3(void);
     void INIT_NCO1(void);
+    void INIT_UART5(void);
 
 
 
