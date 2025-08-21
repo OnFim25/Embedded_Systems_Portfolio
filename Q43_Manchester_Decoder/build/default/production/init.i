@@ -1,4 +1,4 @@
-# 1 "ISR.c"
+# 1 "init.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "ISR.c" 2
+# 1 "init.c" 2
 # 1 "./main.h" 1
 # 15 "./main.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -28200,16 +28200,206 @@ unsigned char __t3rd16on(void);
 
     void delay_msec(unsigned long);
 # 20 "./main.h" 2
-# 2 "ISR.c" 2
-
-volatile unsigned long ticks = 0;
-volatile unsigned long delayCount = 0;
+# 2 "init.c" 2
 
 
-void __attribute__((picinterrupt(("")))) ISR(){
-    if(TMR0IF){
-        TMR0IF = 0;
-        ticks++;
-        if(delayCount) delayCount--;
-    }
+
+void INIT_SYSTEM(){
+    INIT_OSC();
+
+    CONFIGURE_PINS();
+
+    INIT_TIMER0();
+
+
+    INIT_INTERRUPTS();
+}
+
+
+void INIT_OSC(){
+
+    OSCCON1bits.NOSC = 0b110;
+
+
+    OSCCON1bits.NDIV= 0b0000;
+
+
+    OSCTUNE = 0b000000;
+
+
+    OSCFRQ = 0b1000;
+
+
+    OSCENbits.HFOEN = 1;
+
+
+    while(!OSCSTATbits.HFOR);
+}
+# 44 "init.c"
+void INIT_TIMER0(){
+
+
+    T0CON1bits.CS = 0b010;
+
+
+    T0CON1bits.CKPS = 0b0100;
+
+
+    T0CON0bits.OUTPS = 0b0011;
+
+
+    TMR0H = 250;
+
+
+    T0CON0bits.EN = 1;
+
+}
+
+void CONFIGURE_PINS(){
+
+    ANSELCbits.ANSELC3 = 0; TRISCbits.TRISC3 = 1;
+    ANSELAbits.ANSELA5 = 0; TRISAbits.TRISA5 = 1;
+
+
+    CLCIN0PPS = 0b010011;
+
+
+    U5RXPPS = 0b000101;
+}
+
+void INIT_INTERRUPTS(){
+
+
+
+    INTCON0bits.GIE = 0;
+
+
+    TMR0IE = 1;
+    TMR0IF = 0;
+
+
+    INTCON0bits.GIE = 1;
+
+}
+
+
+
+
+
+
+void INIT_CLC1(){
+
+    CLCSELECT = 0;
+
+
+    CLCnCONbits.MODE = 0b100;
+
+
+    CLCnPOLbits.POL = 0;
+
+
+    CLCnSEL1 = 0b00000000;
+
+
+    CLCnSEL0 = 0b00101010;
+
+
+
+    CLCnGLS0 = 0b00000010;
+    CLCnGLS1 = 0b00001000;
+
+    CLCnGLS2 = 0b00000000;
+    CLCnGLS3 = 0b00000000;
+
+
+
+
+    CLCnCONbits.EN = 1;
+}
+
+
+
+
+
+void INIT_CLC2(){
+
+    CLCSELECT = 1;
+
+
+    CLCnCONbits.MODE = 0b001;
+
+
+    CLCnPOLbits.POL = 0;
+
+
+    CLCnSEL1 = 0b00000000;
+
+
+    CLCnSEL0 = 0b00110011;
+
+
+    CLCnGLS0 = 0b00000010;
+    CLCnGLS1 = 0b00000000;
+
+    CLCnGLS2 = 0b00001000;
+    CLCnGLS3 = 0b00000000;
+
+
+
+
+    CLCnCONbits.EN = 1;
+}
+
+
+
+
+void INIT_CLC3(){
+
+    CLCSELECT = 2;
+
+
+    CLCnCONbits.MODE = 0b000;
+
+
+    CLCnPOLbits.POL = 0;
+
+
+    CLCnSEL0 = 0b00110100;
+
+
+    CLCnSEL1 = 0b00001000;
+
+
+    CLCnSEL2 = 0b00101010;
+
+
+
+    CLCnGLS0 = 0b00000010;
+    CLCnGLS1 = 0b00001000;
+
+    CLCnGLS2 = 0b00001000;
+    CLCnGLS3 = 0b00100000;
+
+
+
+    CLCnCONbits.EN = 1;
+}
+
+void INIT_NCO1(){
+
+
+    NCO1CONbits.PFM = 1;
+
+
+    NCO1CONbits.POL = 1;
+
+
+    NCO1CLKbits.PWS = 0b111;
+
+
+
+    NCO1CLKbits.CKS = 0b10101;
+
+
+    NCO1CONbits.EN = 1;
 }

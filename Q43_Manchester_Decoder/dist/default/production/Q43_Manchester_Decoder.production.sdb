@@ -33,7 +33,7 @@
 [v _INIT_TIMER0 INIT_TIMER0 `(v  1 e 1 0 ]
 "63
 [v _CONFIGURE_PINS CONFIGURE_PINS `(v  1 e 1 0 ]
-"72
+"75
 [v _INIT_INTERRUPTS INIT_INTERRUPTS `(v  1 e 1 0 ]
 "7 E:\Programming\Git codes\Embedded_Systems_Portfolio\Q43_Manchester_Decoder\ISR.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
@@ -83,7 +83,7 @@
 [v _OSCENbits OSCENbits `VES82  1 e 1 @179 ]
 "6343
 [v _CLCSELECT CLCSELECT `VEuc  1 e 1 @213 ]
-[s S298 . 1 `uc 1 MODE 1 0 :3:0 
+[s S341 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 INTN 1 0 :1:3 
 `uc 1 INTP 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
@@ -91,13 +91,13 @@
 `uc 1 EN 1 0 :1:7 
 ]
 "6403
-[s S305 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S348 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 ]
-[u S309 . 1 `S298 1 . 1 0 `S305 1 . 1 0 ]
-[v _CLCnCONbits CLCnCONbits `VES309  1 e 1 @214 ]
-[s S324 . 1 `uc 1 G1POL 1 0 :1:0 
+[u S352 . 1 `S341 1 . 1 0 `S348 1 . 1 0 ]
+[v _CLCnCONbits CLCnCONbits `VES352  1 e 1 @214 ]
+[s S367 . 1 `uc 1 G1POL 1 0 :1:0 
 `uc 1 G2POL 1 0 :1:1 
 `uc 1 G3POL 1 0 :1:2 
 `uc 1 G4POL 1 0 :1:3 
@@ -105,12 +105,14 @@
 `uc 1 POL 1 0 :1:7 
 ]
 "6468
-[u S331 . 1 `S324 1 . 1 0 ]
-[v _CLCnPOLbits CLCnPOLbits `VES331  1 e 1 @215 ]
+[u S374 . 1 `S367 1 . 1 0 ]
+[v _CLCnPOLbits CLCnPOLbits `VES374  1 e 1 @215 ]
 "6498
 [v _CLCnSEL0 CLCnSEL0 `VEuc  1 e 1 @216 ]
 "6568
 [v _CLCnSEL1 CLCnSEL1 `VEuc  1 e 1 @217 ]
+"6638
+[v _CLCnSEL2 CLCnSEL2 `VEuc  1 e 1 @218 ]
 "6778
 [v _CLCnGLS0 CLCnGLS0 `VEuc  1 e 1 @220 ]
 "6840
@@ -119,8 +121,10 @@
 [v _CLCnGLS2 CLCnGLS2 `VEuc  1 e 1 @222 ]
 "6964
 [v _CLCnGLS3 CLCnGLS3 `VEuc  1 e 1 @223 ]
-"9482
-[v _RC0PPS RC0PPS `VEuc  1 e 1 @529 ]
+"12534
+[v _CLCIN0PPS CLCIN0PPS `VEuc  1 e 1 @609 ]
+"14208
+[v _U5RXPPS U5RXPPS `VEuc  1 e 1 @634 ]
 "22314
 [v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
 [s S173 . 1 `uc 1 OUTPS 1 0 :4:0 
@@ -178,6 +182,20 @@
 ]
 [u S141 . 1 `S115 1 . 1 0 `S119 1 . 1 0 `S128 1 . 1 0 `S132 1 . 1 0 ]
 [v _T0CON1bits T0CON1bits `VES141  1 e 1 @795 ]
+[s S268 . 1 `uc 1 ANSELA0 1 0 :1:0 
+`uc 1 ANSELA1 1 0 :1:1 
+`uc 1 ANSELA2 1 0 :1:2 
+`uc 1 ANSELA3 1 0 :1:3 
+`uc 1 ANSELA4 1 0 :1:4 
+`uc 1 ANSELA5 1 0 :1:5 
+`uc 1 ANSELA6 1 0 :1:6 
+`uc 1 ANSELA7 1 0 :1:7 
+]
+"38910
+[u S277 . 1 `S268 1 . 1 0 ]
+"38910
+"38910
+[v _ANSELAbits ANSELAbits `VES277  1 e 1 @1024 ]
 [s S226 . 1 `uc 1 ANSELC0 1 0 :1:0 
 `uc 1 ANSELC1 1 0 :1:1 
 `uc 1 ANSELC2 1 0 :1:2 
@@ -192,6 +210,72 @@
 "39902
 "39902
 [v _ANSELCbits ANSELCbits `VES235  1 e 1 @1040 ]
+[s S391 . 1 `uc 1 PFM 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 POL 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"41220
+[s S398 . 1 `uc 1 NCO1PFM 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 NCO1POL 1 0 :1:4 
+`uc 1 NCO1OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 NCO1EN 1 0 :1:7 
+]
+"41220
+[u S405 . 1 `S391 1 . 1 0 `S398 1 . 1 0 ]
+"41220
+"41220
+[v _NCO1CONbits NCO1CONbits `VES405  1 e 1 @1094 ]
+[s S423 . 1 `uc 1 CKS 1 0 :5:0 
+`uc 1 PWS 1 0 :3:5 
+]
+"41300
+[s S426 . 1 `uc 1 CKS0 1 0 :1:0 
+`uc 1 CKS1 1 0 :1:1 
+`uc 1 CKS2 1 0 :1:2 
+`uc 1 CKS3 1 0 :1:3 
+`uc 1 CKS4 1 0 :1:4 
+`uc 1 PWS0 1 0 :1:5 
+`uc 1 PWS1 1 0 :1:6 
+`uc 1 PWS2 1 0 :1:7 
+]
+"41300
+[s S435 . 1 `uc 1 NCO1CKS 1 0 :5:0 
+`uc 1 NCO1PWS 1 0 :3:5 
+]
+"41300
+[s S438 . 1 `uc 1 NCO1CKS0 1 0 :1:0 
+`uc 1 NCO1CKS1 1 0 :1:1 
+`uc 1 NCO1CKS2 1 0 :1:2 
+`uc 1 NCO1CKS3 1 0 :1:3 
+`uc 1 NCO1CKS4 1 0 :1:4 
+`uc 1 NCO1PWS0 1 0 :1:5 
+`uc 1 NCO1PWS1 1 0 :1:6 
+`uc 1 NCO1PWS2 1 0 :1:7 
+]
+"41300
+[u S447 . 1 `S423 1 . 1 0 `S426 1 . 1 0 `S435 1 . 1 0 `S438 1 . 1 0 ]
+"41300
+"41300
+[v _NCO1CLKbits NCO1CLKbits `VES447  1 e 1 @1095 ]
+[s S289 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"47282
+[u S298 . 1 `S289 1 . 1 0 ]
+"47282
+"47282
+[v _TRISAbits TRISAbits `VES298  1 e 1 @1222 ]
 [s S247 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
@@ -206,7 +290,7 @@
 "47406
 "47406
 [v _TRISCbits TRISCbits `VES256  1 e 1 @1224 ]
-[s S269 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S312 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -215,14 +299,14 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "47809
-[s S277 . 1 `uc 1 . 1 0 :7:0 
+[s S320 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "47809
-[u S280 . 1 `S269 1 . 1 0 `S277 1 . 1 0 ]
+[u S323 . 1 `S312 1 . 1 0 `S320 1 . 1 0 ]
 "47809
 "47809
-[v _INTCON0bits INTCON0bits `VES280  1 e 1 @1238 ]
+[v _INTCON0bits INTCON0bits `VES323  1 e 1 @1238 ]
 "58495
 [v _TMR0IE TMR0IE `VEb  1 e 0 @9487 ]
 "58498

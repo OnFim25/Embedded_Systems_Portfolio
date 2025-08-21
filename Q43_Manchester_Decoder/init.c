@@ -61,12 +61,15 @@ void INIT_TIMER0(){
 }
 
 void CONFIGURE_PINS(){
-    //Configure RC0 as digital pin
-    ANSELCbits.ANSELC0 = 0; 
-    TRISCbits.TRISC0 = 1;//Tris must be set to high impedence mode when no data is sending
+    //Configure pins
+    ANSELCbits.ANSELC3 = 0; TRISCbits.TRISC3 = 1;   //CLCIN0PPS
+    ANSELAbits.ANSELA5 = 0; TRISAbits.TRISA5 = 1;   //UART5RX
     
-    //RC0 is selected as the CLC1 output
-    RC0PPS = 0x01;
+    //RC3 is selected as CLCIN0PPS
+    CLCIN0PPS = 0b010011;
+    
+    //RA5 is selected as UART5RX pin
+    U5RXPPS = 0b000101;
 }
 
 void INIT_INTERRUPTS(){
@@ -84,7 +87,11 @@ void INIT_INTERRUPTS(){
     
 }
 
-#error "CLC is not complete nor correct yet"
+
+/*
+ * CLC1 acts as the D Flip-Flop with S and R latch
+ * Inputs => Manchester Encoded input and NCO output
+*/
 void INIT_CLC1(){
     //CLC registers of instance CLCSELECT+1 are selected ie; CLC1
     CLCSELECT = 0;
@@ -95,22 +102,109 @@ void INIT_CLC1(){
     //CLC output is not inverted
     CLCnPOLbits.POL = 0;
     
-    //D1S MUX input => CLCIN0PPS
-    CLCnSEL0 = 0b00000000;
+    //D2S MUX input => CLCIN0PPS
+    CLCnSEL1 = 0b00000000;
     
-    //D2S MUX input => NCO1
-    CLCnSEL1 = 0b00101010;
+    //D1S MUX input => NCO1
+    CLCnSEL0 = 0b00101010;
     
     //Only gates 1&2 output the data for D Flip-Flop  cell 
     //Other gates is output 0 so that they won't interfere at the OR gate of the Cell
-    CLCnGLS0 = 0b00000010;  //UART TX buffer
-    CLCnGLS1 = 0b00001000;
+    CLCnGLS0 = 0b00000010;  //NCO1 output
+    CLCnGLS1 = 0b00001000;  //CLCIN0PPS
     
-    CLCnGLS2 = 0b00000000;  //PWM output
+    CLCnGLS2 = 0b00000000;  
     CLCnGLS3 = 0b00000000;
     
     
     
     //Enable CLC1
     CLCnCONbits.EN = 1;
+}
+
+/*
+ * CLC2 acts as the XOR gate
+ * inputs => Manchester encoded input and CLC1 output
+ */
+void INIT_CLC2(){
+    //CLC registers of instance CLCSELECT+1 are selected ie; CLC1
+    CLCSELECT = 1;
+    
+    //CLC cell is in OR_XOR mode
+    CLCnCONbits.MODE = 0b001;
+    
+    //CLC output is not inverted
+    CLCnPOLbits.POL = 0;
+    
+    //D2S MUX input => CLCIN0PPS
+    CLCnSEL1 = 0b00000000;
+    
+    //D1S MUX input => CLC1 output
+    CLCnSEL0 = 0b00110011;
+    
+    //Only gates 1&3 output the data for OR_XOR function
+    CLCnGLS0 = 0b00000010;  //CLC1 output
+    CLCnGLS1 = 0b00000000;  
+    
+    CLCnGLS2 = 0b00001000;  //CLCIN0PPS
+    CLCnGLS3 = 0b00000000;
+    
+    
+    
+    //Enable CLC2
+    CLCnCONbits.EN = 1;
+}
+/*
+ * CLC3 acts as AND_OR gate 
+ * Inputs => CLC2 output, FOSC and NCO1 output
+ */
+void INIT_CLC3(){
+    //CLC registers of instance CLCSELECT+1 are selected ie; CLC1
+    CLCSELECT = 2;
+    
+    //CLC cell is in AND_OR mode
+    CLCnCONbits.MODE = 0b000;
+    
+    //CLC output is not inverted
+    CLCnPOLbits.POL = 0;
+    
+    //D1S MUX input => CLC2 output
+    CLCnSEL0 = 0b00110100;
+    
+    //D2S MUX input => FOSC
+    CLCnSEL1 = 0b00001000;
+    
+    //D3S MUX input => NCO1 output
+    CLCnSEL2 = 0b00101010;
+    
+    //Gates 1 and 4 takes CLC1 output and NCO1 output respectively
+    //Gates 2 and 3 takes FOSC as inputs
+    CLCnGLS0 = 0b00000010;  //CLC1 output
+    CLCnGLS1 = 0b00001000;  //FOSC 
+    
+    CLCnGLS2 = 0b00001000;  //FOSC
+    CLCnGLS3 = 0b00100000;  //NCO1 output
+    
+
+    //Enable CLC3
+    CLCnCONbits.EN = 1;
+}
+
+void INIT_NCO1(){
+    
+    //NCO1 works in pulse frequency mode (PFM)
+    NCO1CONbits.PFM = 1;
+    
+    //NCO output is active low
+    NCO1CONbits.POL = 1;
+    
+    //NCO output is active for 128 input clock periods
+    NCO1CLKbits.PWS = 0b111;
+    
+    //NCO clock source is CLC3
+    //The NCO period will be controlled by the input clock
+    NCO1CLKbits.CKS = 0b10101;
+    
+    //Enable NCO1
+    NCO1CONbits.EN = 1;
 }

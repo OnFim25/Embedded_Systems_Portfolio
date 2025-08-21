@@ -28179,6 +28179,11 @@ unsigned char __t3rd16on(void);
 
     void INIT_TIMER0(void);
     void INIT_INTERRUPTS(void);
+
+    void INIT_CLC1(void);
+    void INIT_CLC2(void);
+    void INIT_CLC3(void);
+    void INIT_NCO1(void);
 # 18 "./main.h" 2
 # 1 "./ISR.h" 1
 # 15 "./ISR.h"
